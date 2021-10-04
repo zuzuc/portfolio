@@ -1,6 +1,13 @@
 /*
 COLORS:
 
+Color Palette: 4280
+#d0c3bd
+#dcdcdd
+#69849b
+#3d6a66
+#1d2424
+
 Color Palette:4275
 #253532
 #517f83
@@ -15,9 +22,29 @@ Color Palette: 4272
 #002018
 #0f3500
 
-
-
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
+
+:root {
+  --dark-bg-color: #1d2424;
+  --light-bg-color: #faf9f9;
+  --dark-font: #1d2424;
+  --light-font: #faf9f9;
+  --dark: #1d2424;
+  --mid-grey: #303030;
+  --white: #faf9f9;
+  --beige: #d0c3bd;
+  --light-grey: #dcdcdd;
+  --sea-water: #69849b;
+  --dusty-green: #3d6a66;
+  --section-font: 2.5rem;
+  --large-font: 1.5rem;
+  --regular-font: 1.2rem;
+  --large-size: 1.5rem;
+  --regular-size: 1rem;
+  --small-size: 0.5rem;
+}
 
 *,
 *::after,
@@ -38,7 +65,21 @@ body {
   color: #777;
   padding: 3rem;
   box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Nunito Sans", sans-serif;
 }
+
+.section-font {
+  font-size: var(--section-font);
+  padding: 0.5rem;
+}
+
+.subheading-font {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+/*HEADER*/
 
 .header {
   height: 95vh;
@@ -85,7 +126,7 @@ body {
 
 .heading-primary--main {
   display: block;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
@@ -95,8 +136,8 @@ body {
 
 .heading-primary--sub {
   display: block;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 500;
   letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
 }
@@ -167,10 +208,10 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn--white {
+/* .btn--white {
   background-color: #fff;
   color: #777;
-}
+} */
 
 .btn::after {
   content: "";
@@ -199,4 +240,103 @@ body {
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
+}
+
+.icons-container {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  border: 0.5px solid var(--white);
+  border-radius: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+.icon:hover {
+  border: 0.5px solid var(--sea-water);
+  background-color: var(--sea-water);
+  color: white;
+}
+
+/*PROJECT*/
+
+.grids-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grids-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.grid-card {
+  display: grid;
+  margin: 1rem;
+  color: var(--smoke);
+  border-radius: 1%;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.grid-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.project {
+  width: 100%;
+}
+
+.project .title {
+  font-size: var(--large-font);
+  padding: var(--regular-size);
+  font-weight: bold;
+  background-color: var(--teal);
+  color: var(--light-font);
+  text-shadow: 2.5px 2.5px 1px var(--mid-grey);
+}
+
+.project .img {
+  display: grid;
+  place-items: center;
+}
+
+.project .img img {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.project .stacks {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: var(--small-size) 0;
+}
+
+.project .stack {
+  padding: var(--small-size);
+  margin: var(--small-size);
+  background-color: var(--mid-grey);
+  color: var(--white);
+  border-radius: 4px;
+}
+
+.project .description {
+  padding: var(--large-size);
 }
