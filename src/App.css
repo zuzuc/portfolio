@@ -44,7 +44,7 @@ body {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(126, 213, 111, 0.801),
+      rgba(147, 111, 213, 0.801),
       rgba(40, 180, 133, 0.801)
     ),
     url();
