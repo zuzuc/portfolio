@@ -124,7 +124,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary--main {
+.heading-primary--main1 {
   display: block;
   font-size: 4rem;
   font-weight: 400;
@@ -134,12 +134,44 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading-primary--sub {
+.heading-primary--main2 {
   display: block;
-  font-size: 1.5rem;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: 1s ease-out;
+}
+
+.heading-primary--sub {
+  color: white;
+  display: block;
+  font-size: 3rem;
   font-weight: 500;
   letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out;
+  /* animation: moveInRight 1s ease-out; */
+}
+
+/*TYPEWRITER*/
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.typewriter {
+  height: 2vw;
+  margin: 8vh;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  letter-spacing: 0.1vw;
+  animation: blink-caret 0.9s step-end infinite;
 }
 
 @keyframes moveInLeft {
@@ -339,25 +371,4 @@ body {
 
 .project .description {
   padding: var(--large-size);
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #d4b466;
-  }
-}
-
-/*TYPEWRITER*/
-
-.typewriter {
-  height: 1.5vw;
-
-  border-right: 0.15em solid #d4b466;
-  white-space: nowrap;
-  letter-spacing: 0.1vw;
-  animation: blink-caret 0.9s step-end infinite;
 }
