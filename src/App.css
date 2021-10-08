@@ -340,3 +340,24 @@ body {
 .project .description {
   padding: var(--large-size);
 }
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #d4b466;
+  }
+}
+
+/*TYPEWRITER*/
+
+.typewriter {
+  height: 1.5vw;
+
+  border-right: 0.15em solid #d4b466;
+  white-space: nowrap;
+  letter-spacing: 0.1vw;
+  animation: blink-caret 0.9s step-end infinite;
+}

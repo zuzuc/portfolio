@@ -1,9 +1,12 @@
 import React from "react";
+import TypeWriterCycle from '../TypeWriterCycle';
+import textData from './data/textData';
 import { useHistory } from 'react-router-dom';
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 function Header(){
     const history = useHistory();
+    const typeWriterItems = [textData.typeWriter1, textData.typeWriter2, textData.typeWriter3, textData.typeWriter4];
     const handleLinkedIn = (e) => {
         let path = window.open('https://www.linkedin.com/in/franziska-luig/')
         history.push(path);
@@ -34,8 +37,14 @@ function Header(){
                 <div className="header__text-box">
                     <h1 className="heading-primary">
                         <span className="heading-primary--main">Franziska Luig</span>
-                        <span className="heading-primary--sub">Web Developer & Project Manager</span>
                     </h1>
+                    <div className="heading-primary--sub">
+                    {/* <span className="heading-primary--sub">Web Developer & Project Manager</span> */}
+                        {textData.map(() => (
+                            <TypeWriterCycle items={typeWriterItems}/>
+                        ))}
+                        
+                    </div>
                     <div className="icons-container">
                         <div className="icon"><FaLinkedinIn onClick={handleLinkedIn} /></div>  
                         <div className="icon"><FaGithub onClick={handleGit} /></div>
