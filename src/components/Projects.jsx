@@ -5,7 +5,7 @@ import projectData from "./../data/projectData";
 
 function Projects(){
     return (
-        <>
+        <div className="projects">
           <div className="section-container">
               <div className="headline-container">
                 <div className="section-font">Projects</div>
@@ -35,7 +35,7 @@ function Projects(){
                     </div>
                 </div>
           </div>
-        </>
+        </div>
 
     );
 };
