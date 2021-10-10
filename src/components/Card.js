@@ -11,11 +11,11 @@ function Card(props) {
             <div className="img">
               <img src={props.image} alt={props.alt} />
             </div>
-            {/* <div className="stacks">
+            <div className="stacks">
               {props.techStacks.map((techStack, index) => (
                 <div className="stack" key={index}>{techStack}</div>
               ))}
-            </div> */}
+            </div>
             <div className="description">{props.description}</div>
           </div>
         </div>
