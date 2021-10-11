@@ -1,5 +1,5 @@
 import React from "react";
-import TypeWriterCycle from './TypeWriterCycle';
+import TypewriterCycle from './TypewriterCycle';
 import textData from './../data/textData';
 import { useHistory } from 'react-router-dom';
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
@@ -33,7 +33,7 @@ function Header(){
                         <span className="heading-primary--main2">Luig</span>
                     </h1>
                     <div className="heading-primary--sub">
-                      <TypeWriterCycle items={typeWriterItems}/>                     
+                      <TypewriterCycle items={typeWriterItems}/>                     
                     </div>
                     <div className="icons-container">
                         <div className="icon"><FaLinkedinIn onClick={handleLinkedIn} /></div>  
