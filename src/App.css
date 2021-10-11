@@ -291,7 +291,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.875rem;
   margin: 2.5rem 1rem;
-  text-align: left;
 }
 
 .skills-container {
@@ -335,12 +334,39 @@ body {
   font-size: var(--regular-font);
 }
 
+.skill-list {
+  padding: var(--small-size);
+  margin: var(--small-size);
+  border-radius: 0.25rem;
+}
+.aboutlanguages {
+  font-weight: bold;
+}
+
+.abouttools {
+  font-weight: bold;
+}
+
+.aboutpractices {
+  font-weight: bold;
+}
+
+/* .skill {
+  padding: var(--small-size);
+  margin: var(--small-size);
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border-radius: 4px;
+}
 .skill ul {
+  padding: var(--small-size);
+  margin: var(--small-size);
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 1.25rem;
-  /* list-style: none; */
 }
+
+
 
 /*+++++++++PROJECTS++++++++*/
 
@@ -370,8 +396,6 @@ body {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  /* border-bottom: 1px solid var(--dark-blue);
-  padding: var(--small-size) 0; */
 }
 
 .section-font::after {
@@ -394,14 +418,6 @@ body {
   width: 100%;
   left: 0;
 }
-
-/* .section-font-line {
-  border-bottom: 1px solid var(--dark-blue);
-  padding: var(--small-size) 0;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-} */
 
 .subheading-font {
   font-size: var(--regular-font);
