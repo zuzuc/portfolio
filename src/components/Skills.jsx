@@ -16,11 +16,20 @@ const Skills = () => {
                     <div className="skill-title">Frontend Development</div>
                   </div>
                   <div className="skills">
-                    {skillData
+                  {skillData.map((skill) => (
+                    <SkillList
+                      key={skill.type}
+                      languages={skill.languages}
+                      practices={skill.practices}
+                      tools={skill.tools}
+                    />
+
+                               
+                    {/* {skillData
                       .filter((skill) => skill.type === "Frontend Development")
                       .map((frontendDevelopment, index) => (
                         <SkillList skill={frontendDevelopment.skill} key={index}/>
-                      ))}
+                      ))} */}
                   </div>
                 </div>
                 <div className="skills-container">

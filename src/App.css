@@ -307,6 +307,15 @@ body {
   padding: var(--small-size) 0;
 }
 
+.title-wrapper:hover {
+  display: flex;
+  border-bottom: 0.063rem solid var(--dark-blue);
+  padding: var(--small-size) 0;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: 1s ease-out;
+}
+
 .title-wrapper svg {
   padding: var(--small-size) 0;
 }
@@ -355,6 +364,7 @@ body {
 .section-font {
   position: relative;
   font-size: var(--section-font);
+  font-weight: bold;
   padding: 0.5rem;
   display: flex;
   animation-name: moveInLeft;
