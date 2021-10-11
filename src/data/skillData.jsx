@@ -54,7 +54,8 @@ const skillData = [
                "Monday, ",
                "Miro, ",
                "Slack, ",
-               "Discord",               
+               "Discord, ", 
+               "MS Teams",              
           ],          
      },
 

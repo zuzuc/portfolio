@@ -3,6 +3,10 @@ import React from 'react';
 import SkillListOne from "./SkillListOne";
 import SkillListTwo from "./SkillListTwo";
 import skillData from '../data/skillData';
+import frontenddevelopment from "./../assets/frontenddevelopment.png";
+import backenddevelopment from "./../assets/backenddevelopment.png";
+import projectmanagement from "./../assets/projectmanagement.png";
+
 
 const Skills = () => {
     return (
@@ -14,7 +18,7 @@ const Skills = () => {
                 <div className="skills-grid">
                   <div className="skills-container">
                     <div className="title-wrapper">
-                      {/* <img src={frontendSVG} alt="frontend development" /> */}
+                      <img src={frontenddevelopment} alt="frontend development" />
                       <div className="skill-title">Frontend Development</div>
                     </div>
                     <div className="skills">
@@ -33,7 +37,7 @@ const Skills = () => {
                   </div>
                   <div className="skills-container">
                     <div className="title-wrapper">
-                      {/* <img src={backendSVG} alt="backend development" /> */}
+                      <img src={backenddevelopment} alt="backend development" />
                       <div className="skill-title">Backend Development</div>
                     </div>
                     <div className="skills">
@@ -52,7 +56,7 @@ const Skills = () => {
                   </div>
                   <div className="skills-container">
                     <div className="title-wrapper">
-                      {/* <img src={projectSVG} alt="project management" /> */}
+                      <img src={projectmanagement} alt="project management" />
                       <div className="skill-title">Project Management</div>
                     </div>
                     <div className="skills">

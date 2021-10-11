@@ -315,8 +315,12 @@ body {
   animation-timing-function: 1s ease-out;
 }
 
-.title-wrapper svg {
+.title-wrapper img {
   padding: var(--small-size) 0;
+  height: 10vh;
+  display: grid;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .skill-title {
