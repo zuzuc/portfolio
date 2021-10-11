@@ -1,43 +1,45 @@
 const skillData = [
     {
          type: "Frontend Development",
-         skill: "Development & Deployment"
+         languages:"",
+         tools: "",
+         skill: ""
     },
     {
          type: "Frontend Development",
-         skill: "Agile Methodology (Scrum)"
+         skill: ""
     },
     {
          type: "Frontend Development",
-         skill: "UX/UI Fundamentals"
+         skill: ""
     },
     {
          type: "Frontend Development",
-         skill: "DevOps (Monitoring, CI/CD, Deployment)"
+         skill: ""
     },
     {
          type: "Backend Development",
-         skill: "Training & Coaching"
+         skill: ""
     },
     {
          type: "Backend Development",
-         skill: "Program/Project Management"
+         skill: ""
     },
     {
          type: "Backend Development",
-         skill: "Curriculum Development & Evaluation"
+         skill: ""
     },
     {
          type: "Backend Development",
-         skill: "Content Creator (Documentation & Webpages)"
+         skill: ""
     },
     {
          type: "Project Management",
-         skill: "Design Logical Processes"
+         skill: "Agile Methods, SCRUM"
     },
     {
          type: "Project Management",
-         skill: "Statistics & Data Processing"
+         skill: "Design Thinking"
     },
     {
          type: "Project Management",
@@ -45,7 +47,7 @@ const skillData = [
     },
     {
          type: "Project Management",
-         skill: "Analytical Ways Resolving Problems"
+         skill: "Planning & Organization"
     }
 ]
 
