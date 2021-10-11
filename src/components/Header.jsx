@@ -27,13 +27,13 @@ function Header(){
     return (
         <header>
             <div className="header">
-                <div className="header__logo-box">
+                {/* <div className="header__logo-box">
                     <img 
                         src="img/logofranzi.png"
                         alt="Logo" 
                         className="header__logo"
                     ></img>
-                </div>
+                </div> */}
                 <div className="header__text-box">
                     <h1 className="heading-primary">
                         <span className="heading-primary--main1">Franziska</span>

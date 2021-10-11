@@ -325,14 +325,36 @@ body {
 }
 
 .section-font {
+  position: relative;
   font-size: var(--section-font);
   padding: 0.5rem;
   display: flex;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  border-bottom: 1px solid var(--dark-blue);
-  padding: var(--small-size) 0;
+  /* border-bottom: 1px solid var(--dark-blue);
+  padding: var(--small-size) 0; */
+}
+
+.section-font::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--dark-blue);
+  left: 50%;
+  bottom: -1vh;
+  transition: all 0.4s ease-in-out;
+}
+
+.section-font:hover {
+  color: var(--sea-water);
+  cursor: pointer;
+}
+
+.section-font:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 /* .section-font-line {
