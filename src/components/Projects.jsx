@@ -9,7 +9,7 @@ function Projects(){
           <div className="section-container">
               <div className="headline-container">
                 <div className="section-font">Projects</div>
-                  <div className="subheading-font">Visit my{" "}
+                  {/* <div className="subheading-font">Visit my{" "}
                     <a
                       href="https://github.com/zuzuc"
                       className="link"
@@ -17,7 +17,7 @@ function Projects(){
                       rel="noopener noreferrer"
                       >Github</a>{" "}
                       page to view current projects. 
-                  </div>  
+                  </div>   */}
                 </div>
                 <div className="grids-container">
                     <div className="grids-wrapper">
