@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import TypeWriter from './TypeWriter';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import TypeWriter from "./TypeWriter";
 
 function TypewriterCycle({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
