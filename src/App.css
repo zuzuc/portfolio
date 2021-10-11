@@ -32,7 +32,7 @@ Color Palette: 4272
   --light-grey: #f5f5f5;
   --sea-water: #69849b;
   --dusty-green: #3d6a66;
-  --section-font: 2.5rem;
+  --section-font: 3rem;
   --large-font: 3rem;
   --regular-font: 1.5rem;
   --small-font: 1rem;
@@ -450,12 +450,12 @@ a {
 }
 
 .project .title {
-  font-size: var(--large-font);
+  font-size: var(--regular-font);
   padding: var(--regular-size);
   font-weight: bold;
-  background-color: var(--sea-water);
+  background-color: var(--dark-blue);
   color: var(--white);
-  text-shadow: 2.5px 2.5px 1px var(--dark-blue);
+  /* text-shadow: 2.5px 2.5px 1px var(--light-grey); */
 }
 
 .project .title:link,
@@ -473,6 +473,12 @@ a {
   place-items: center;
   width: 100%;
   height: auto;
+}
+
+.project .type {
+  padding: var(--small-size);
+  margin: var(--small-size);
+  font-size: var(--regular-font);
 }
 
 .project .stacks {

@@ -25,9 +25,10 @@ function Projects(){
                             <Card
                                 key={project.title}
                                 title={project.title}
+                                type={project.type}
                                 image={project.image}
                                 techStacks={project.techStacks}
-                                description={project.description}
+                                // description={project.description}
                                 alt={`Screenshot of ${project.title}`}
                                 url={project.url}
                             />

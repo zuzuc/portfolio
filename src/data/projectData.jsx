@@ -1,4 +1,6 @@
-import mapstoriesImg from './../assets/mapstories.JPG';
+import mapstoriesImg from "./../assets/mapstories.JPG";
+import pastalavistaImg from "./../assets/pastalavista.JPG"
+import animalblogImg from "./../assets/animalblog.JPG"
 
 const projectData = [
     {
@@ -6,40 +8,45 @@ const projectData = [
         image: mapstoriesImg,
         alt: 'Image of Map Stories',
         url: 'https://map-stories.netlify.app/',
+        type: 'Full-Stack',
         techStacks: [
             'React',
-            'JavaScript',
-            'Node JS',
+            'Node.js',
+            'MongoDB',
+            'API'
         ],
         description:
-            'Platform dedicated to data-visualisation through maps and sharing real-life stories'
+            'Platform dedicated to data-visualisation & story-telling'
     },
     {
-        title: 'MapStories',
-        image: mapstoriesImg,
-        alt: 'Image of Map Stories',
-        url: 'https://map-stories.netlify.app/',
+        title: 'Pasta Cookbook',
+        image: pastalavistaImg,
+        alt: 'Image of Pasta La Vista',
+        url: 'https://hangingpulse.github.io/WBS-cookbook/',
+        type: 'Frontend',
         techStacks: [
-            'React',
-            'JavaScript',
-            'Node JS',
+            'HTML',
+            'CSS',
+            'Vanilla JavaScript'
         ],
         description:
-            'Platform dedicated to data-visualisation through maps and sharing real-life stories'
+            'Cookbook website for pasta lovers'
        
     }, 
     {
-        title: 'MapStories',
-        image: mapstoriesImg,
-        alt: 'Image of Map Stories',
-        url: 'https://map-stories.netlify.app/',
+        title: 'Blog',
+        image: animalblogImg,
+        alt: 'Image of Animal Blog',
+        url: 'https://mockodev.github.io/headlesscms/',
+        type: 'Backend',
         techStacks: [
             'React',
-            'JavaScript',
-            'Node JS',
+            'API',
+            'Contentful',
+            'SCSS'
         ],
         description:
-            'Platform dedicated to data-visualisation through maps and sharing real-life stories'
+            'Blog                                                   '
        
     }, 
 

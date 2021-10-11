@@ -11,6 +11,7 @@ function Card(props) {
             <div className="img">
               <img src={props.image} alt={props.alt} />
             </div>
+            <div className="type">{props.type}</div>                
             <div className="stacks">
               {props.techStacks.map((techStack, index) => (
                 <div className="stack" key={index}>{techStack}</div>
