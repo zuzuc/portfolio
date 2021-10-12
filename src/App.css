@@ -238,46 +238,6 @@ body {
   height: 30%;
 }
 
-/* @media only screen and (max-width: 780px) {
-  .avatar {
-    padding: var(--small-size);
-  }
-  .avatar img {
-    width: 70%;
-  } */
-
-/* @media only screen and (max-width: 500px) {
-    header {
-      height: 70vh;
-    }
-    .header-font {
-      font-size: 2rem;
-    }
-    .subheader-font {
-      font-size: 1.3rem;
-    }
-    .avatar img {
-      width: 50%;
-    } */
-
-/* @media (min-aspect-ratio: 16/9) {
-      .header-container {
-        height: 90%;
-      }
-      .avatar {
-        padding: var(--regular-size);
-      }
-      .avatar img {
-        width: 200px;
-      }
-      .header-font {
-        font-size: 2rem;
-      }
-      .subheader-font {
-        font-size: 1.3rem;
-      }
-    } */
-
 /*+++++++++SKILLS/ EXPERIENCE & EXPERTISE++++++++*/
 .expertise {
   background-color: var(--light-grey);
@@ -388,7 +348,6 @@ body {
   align-items: center;
   text-align: center;
   padding: 1rem;
-  width: 60vw;
 }
 
 .section-font {
@@ -548,4 +507,70 @@ a {
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+
+/*+++++++++++++++MEDIA++++++++++++*/
+
+@media only screen and (max-width: 80rem) {
+  .App {
+    overflow-x: hidden;
+  }
+  .headline-container {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 48.75rem) {
+  .profile {
+    padding: var(--small-size);
+  }
+  .profile img {
+    width: 70%;
+  }
+  .subheading-font {
+    font: var(--regular-size);
+  }
+  .icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 31.25rem) {
+  header {
+    height: 70vh;
+  }
+  .header-font {
+    font-size: 2rem;
+  }
+  .subheader-font {
+    font-size: 1.3rem;
+  }
+  .profile img {
+    width: 50%;
+  }
+  .section-font {
+    font-size: var(--large-font);
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .header-container {
+    height: 90%;
+  }
+  .profile {
+    padding: var(--regular-size);
+  }
+  .profile img {
+    width: 12.5rem;
+  }
+  .header-font {
+    font-size: 2rem;
+  }
+  .subheader-font {
+    font-size: 1.3rem;
+  }
 }
