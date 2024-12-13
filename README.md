@@ -1,6 +1,6 @@
 # Hi, I´m Franziska
 
-This is the repo to my personal website.
+Welcome to my portfolio. This page is under construction. I will be adding new content and features as I improve my knowledge.
 
 ## Check it out here:
 
