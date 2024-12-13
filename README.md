@@ -1,6 +1,8 @@
-# Hi, I´m Franziska
+# Portfolio
 
-Welcome to my portfolio. This page is under construction. I will be adding new content and features as I improve my knowledge.
+## Welcome to my portfolio
+
+This page is under construction. I will be adding new content and features as I improve my knowledge.
 
 ## Check it out here:
 
