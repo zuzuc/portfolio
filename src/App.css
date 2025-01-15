@@ -104,8 +104,7 @@ body {
       to right bottom,
       rgba(147, 111, 213, 0.801),
       rgba(40, 180, 133, 0.801)
-    ),
-    url();
+    );
   background-size: cover;
   background-position: top;
   position: relative;

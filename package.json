@@ -8,15 +8,16 @@
     "@testing-library/user-event": "^12.8.3",
     "g": "^2.0.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "resolve-url": "^0.2.1",
     "urix": "^0.1.0",
     "uuid": "^8.3.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "webpack": "^5.97.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

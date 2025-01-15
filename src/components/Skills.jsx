@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SkillListOne from "./SkillListOne";
 import SkillListTwo from "./SkillListTwo";
