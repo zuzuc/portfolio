@@ -1,8 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
+import { Link, useNavigate } from "react-router-dom";
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
-function Footer() {
+const Navbar = () => {
   const navigate = useNavigate();
   const handleLinkedIn = (e) => {
     let path = window.open("https://www.linkedin.com/in/franziska-luig/");
@@ -20,21 +21,32 @@ function Footer() {
   };
 
   return (
-    <footer className="footer">
-      <div className="icons-container">
-        <div className="icon">
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="navbar-logo">
+        <Link to="/">FL</Link>
+      </div>
+      {/* Menu Items */}
+      <ul className="navbar-menu">
+        <li>
+          <Link to="/projects">Projects</Link>
+        </li>
+      </ul>
+
+      {/* Button Group */}
+      <div className="navbar-buttons">
+        <div className="btn">
           <FaLinkedinIn onClick={handleLinkedIn} />
         </div>
-        <div className="icon">
+        <div className="btn">
           <FaGithub onClick={handleGit} />
         </div>
-        <div className="icon">
+        <div className="btn">
           <FaAt onClick={handleMail} />
         </div>
       </div>
-      <div className="copyright">© Franziska Luig 2025</div>
-    </footer>
+    </nav>
   );
-}
+};
 
-export default Footer;
+export default Navbar;
