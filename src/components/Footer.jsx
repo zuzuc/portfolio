@@ -1,22 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 function Footer() {
-  const navigate = useNavigate();
-  const handleLinkedIn = (e) => {
-    let path = window.open("https://www.linkedin.com/in/franziska-luig/");
-    navigate.push(path);
+  const handleLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/franziska-luig/");
   };
 
-  const handleGit = (e) => {
-    let path = window.open("https://github.com/zuzuc");
-    navigate.push(path);
+  const handleGit = () => {
+    window.open("https://github.com/zuzuc");
   };
 
-  const handleMail = (e) => {
-    let path = window.open("mailto:franziska.luig@posteo.de");
-    navigate.push(path);
+  const handleMail = () => {
+    window.open("mailto:franziska.luig@posteo.de");
   };
 
   return (

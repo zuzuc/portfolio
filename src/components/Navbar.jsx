@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-  const handleLinkedIn = (e) => {
-    let path = window.open("https://www.linkedin.com/in/franziska-luig/");
-    navigate.push(path);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleGit = (e) => {
-    let path = window.open("https://github.com/zuzuc");
-    navigate.push(path);
+  const handleLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/franziska-luig/");
   };
 
-  const handleMail = (e) => {
-    let path = window.open("mailto:franziska.luig@posteo.de");
-    navigate.push(path);
+  const handleGit = () => {
+    window.open("https://github.com/zuzuc");
+  };
+
+  const handleMail = () => {
+    window.open("mailto:franziska.luig@posteo.de");
   };
 
   return (
@@ -26,15 +28,23 @@ const Navbar = () => {
       <div className="navbar-logo">
         <Link to="/">FL</Link>
       </div>
+
+      {/* Hamburger Menu */}
+      <button className="navbar-hamburger" onClick={toggleMenu}>
+        ☰
+      </button>
+
       {/* Menu Items */}
-      <ul className="navbar-menu">
+      <ul className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects" onClick={() => setIsMenuOpen(false)}>
+            Projects
+          </Link>
         </li>
       </ul>
 
       {/* Button Group */}
-      <div className="navbar-buttons">
+      <div className={`navbar-buttons ${isMenuOpen ? "open" : ""}`}>
         <div className="btn">
           <FaLinkedinIn onClick={handleLinkedIn} />
         </div>
