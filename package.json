@@ -11,7 +11,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^4.3.1",
-    "react-router-dom": "^5.3.0",
+    "react-router-dom": "^7.1.1",
     "react-scripts": "^5.0.1",
     "resolve-url": "^0.2.1",
     "urix": "^0.1.0",

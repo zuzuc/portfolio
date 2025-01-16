@@ -1,25 +1,25 @@
 import React from "react";
 import TypewriterCycle from './TypewriterCycle';
 import textData from './../data/textData';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 function Header(){
-    const history = useHistory();
+    const navigate = useNavigate();
     const typeWriterItems = [textData.typeWriter1, textData.typeWriter2, textData.typeWriter3, textData.typeWriter4];
     const handleLinkedIn = (e) => {
         let path = window.open('https://www.linkedin.com/in/franziska-luig/')
-        history.push(path);
+        navigate.push(path);
     };
 
     const handleGit = (e) => {
         let path = window.open('https://github.com/zuzuc');
-        history.push(path);
+        navigate.push(path);
     };
 
     const handleMail = (e) => {
         let path = window.open('mailto:franziska.luig@posteo.de');
-        history.push(path);
+        navigate.push(path);
     };
 
 
