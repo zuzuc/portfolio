@@ -516,8 +516,8 @@ a {
     font: var(--regular-size);
   }
   .icon {
-    height: 2rem;
-    width: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
   }
   .skills-grid {
     grid-template-columns: 1fr;
@@ -529,7 +529,15 @@ a {
     width: 40vw;
   }
   .heading-primary {
+    text-align: center;
+    word-break: break-word;
+    hyphens: manual; /* Optional, ensures proper hyphenation with soft hyphens */
+  }
+  .heading-primary--main1,
+  .heading-primary--main2 {
+    display: block;
     font-size: 2rem;
+    word-wrap: break-word; /* Ensures words break if necessary */
   }
   .heading-primary--sub {
     font-size: 1.3rem;
