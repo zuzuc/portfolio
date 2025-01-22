@@ -1,109 +1,65 @@
 const skillData = [
-    {
-         type: "Frontend Development",
-         aboutlanguages: "Languages:",
-         languages: [
-              "HTML5, ",
-              "CSS3, ",
-              "Sass, ",
-              "JavaScript(ES6), ",
-              "React",
-          ],
-          abouttools: "Tools I Use:",
-          tools: [
-              "GitHub, ",
-              "Gitlab, ",
-              "Bootstrap, ",
-              "React Spring, ",
-              "Particles.js, ",
-              "Figma, ",
-              "Netlify",
-         ],
-    },
-    {
-          type: "Backend Development",
-          aboutlanguages: "Languages:",
-          languages: [
-               "NodeJs, ",
-               "NoSQL, ",
-               "SQL",
-           ],
-          abouttools: "Tools I Use:",
-          tools: [
-               "Express, ",
-               "MongoDB, ",
-               "PostgreSQL, ",
-               "Heroku, ",
-               "Github",
-          ],
-     },
-     {
-          type: "Project Management",
-          aboutpractices: "Practices:",
-          practices: [
-               "Agile Methods, ",
-               "Scrum, ",
-               "Kanban, ",
-               "Design Thinking",
-          ],
-          abouttools: "Tools I Use:",
-          tools: [
-               "Trello, ",
-               "Airtable, ",
-               "Zapier, ",
-               "Monday, ",
-               "Miro, ",
-               "Slack, ",
-               "Discord, ", 
-               "MS Teams",              
-          ],          
-     },
-
-
-
-
-
-//     {
-//          type: "Frontend Development",
-//          skill: ""
-//     },
-//     {
-//          type: "Frontend Development",
-//          skill: ""
-//     },
-//     {
-//          type: "Frontend Development",
-//          skill: ""
-//     },
-   
-//     {
-//          type: "Backend Development",
-//          skill: ""
-//     },
-//     {
-//          type: "Backend Development",
-//          skill: ""
-//     },
-//     {
-//          type: "Backend Development",
-//          skill: ""
-//     },
-//     {
-//          type: "Project Management",
-//          skill: "Agile Methods, SCRUM"
-//     },
-//     {
-//          type: "Project Management",
-//          skill: "Design Thinking"
-//     },
-//     {
-//          type: "Project Management",
-//          skill: "Report Writing & Documentation"
-//     },
-//     {
-//          type: "Project Management",
-//          skill: "Planning & Organization"
-//     }
-]
+  {
+    type: "Languages",
+    items: [
+      { name: "HTML5", icon: "path/to/html-icon.png" },
+      { name: "CSS3", icon: "path/to/css-icon.png" },
+      { name: "Sass/SCSS", icon: "path/to/sass-icon.png" },
+      { name: "JavaScript", icon: "path/to/javascript-icon.png" },
+    ],
+  },
+  {
+    type: "Tools & Libraries",
+    items: [
+      { name: "React", icon: "path/to/react-icon.png" },
+      { name: "Next.js", icon: "path/to/nextjs-icon.png" },
+      { name: "Webpack", icon: "path/to/webpack-icon.png" },
+      { name: "Node.js", icon: "path/to/nodejs-icon.png" },
+      { name: "Express.js", icon: "path/to/expressjs-icon.png" },
+      { name: "SQL", icon: "path/to/sql-icon.png" },
+      { name: "MongoDB", icon: "path/to/mongodb-icon.png" },
+      { name: "Drupal", icon: "path/to/drupal-icon.png" },
+      { name: "Twig", icon: "path/to/twig-icon.png" },
+      { name: "Wordpress", icon: "path/to/wordpress-icon.png" },
+      { name: "Bootstrap", icon: "path/to/bootstrap-icon.png" },
+      { name: "D3", icon: "path/to/d3-icon.png" },
+      { name: "React Spring", icon: "path/to/reactspring-icon.png" },
+      { name: "Particles.js", icon: "path/to/particlesjs-icon.png" },
+      { name: "Git", icon: "path/to/git-icon.png" },
+      { name: "GitHub", icon: "path/to/github-icon.png" },
+      { name: "GitLab", icon: "path/to/gitlab-icon.png" },
+      { name: "Docker", icon: "path/to/docker-icon.png" },
+      { name: "Jira", icon: "path/to/jira-icon.png" },
+      { name: "Figma", icon: "path/to/figma-icon.png" },
+      { name: "InDesign", icon: "path/to/indesign-icon.png" },
+      { name: "Zapier", icon: "path/to/zapier-icon.png" },
+      { name: "Airtable", icon: "path/to/airtable-icon.png" },
+    ],
+  },
+  {
+    type: "Project Management",
+    items: [
+      { name: "Agile Methods" },
+      { name: "Scrum" },
+      { name: "Kanban" },
+      { name: "Design Thinking" },
+      { name: "Team Work" },
+      { name: "Planning & Organization" },
+      { name: "Conducting Interviews" },
+      { name: "Time Management" },
+      { name: "Moderation & Presentation" },
+      { name: "Organizational Development" },
+    ],
+  },
+  {
+    type: "Themes",
+    items: [
+      { name: "Web Development" },
+      { name: "Software Development" },
+      { name: "Social & Environmental Justice" },
+      { name: "Political Science & International Development" },
+    ],
+  },
+];
 
 export default skillData;

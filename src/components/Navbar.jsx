@@ -40,7 +40,7 @@ const Navbar = () => {
             About
           </Link>
           <Link to="/skills" onClick={() => setIsMenuOpen(false)}>
-            Skills
+            Profile
           </Link>
           <Link to="/projects" onClick={() => setIsMenuOpen(false)}>
             Projects

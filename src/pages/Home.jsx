@@ -17,14 +17,14 @@ function Home() {
         <div className="menu">
           <ul className="menu-list">
             <li className="menu-item">
-              <a href="/projects">Projects</a>
-            </li >
-            <li className="menu-item">
               <a href="/about">About</a>
             </li>
             <li className="menu-item">
-              <a href="/skills">Skills</a>
+              <a href="/skills">Profile</a>
             </li>
+            <li className="menu-item">
+              <a href="/projects">Projects</a>
+            </li >
           </ul>
         </div>
         <Footer />

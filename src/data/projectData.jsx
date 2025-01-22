@@ -1,6 +1,6 @@
-import mapstoriesImg from "./../assets/mapstories.JPG";
-import pastalavistaImg from "./../assets/pastalavista.JPG"
-import animalblogImg from "./../assets/animalblog.JPG"
+import mapstoriesImg from "./../assets/images/mapstories.JPG";
+import pastalavistaImg from "./../assets/images/pastalavista.JPG"
+import animalblogImg from "./../assets/images/animalblog.JPG"
 
 const projectData = [
     {
