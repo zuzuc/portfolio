@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import Card from "./Card";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Card from "../components/Card";
 import projectData from "./../data/projectData";
 
 function Projects() {

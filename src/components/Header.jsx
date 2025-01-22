@@ -1,6 +1,7 @@
 import React from "react";
 import TypewriterCycle from "./TypewriterCycle";
 import textData from "./../data/textData";
+import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 function Header() {
   const typeWriterItems = [
@@ -9,6 +10,18 @@ function Header() {
     textData.typeWriter3,
     textData.typeWriter4,
   ];
+
+  const handleLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/franziska-luig/");
+  };
+
+  const handleGit = () => {
+    window.open("https://github.com/zuzuc");
+  };
+
+  const handleMail = () => {
+    window.open("mailto:franziska.luig@posteo.de");
+  };
 
   return (
     <header>
@@ -20,6 +33,17 @@ function Header() {
           </h1>
           <div className="heading-primary--sub">
             <TypewriterCycle items={typeWriterItems} />
+          </div>
+          <div className="icons-container">
+            <div className="icon">
+              <FaLinkedinIn onClick={handleLinkedIn} />
+            </div>
+            <div className="icon">
+              <FaGithub onClick={handleGit} />
+            </div>
+            <div className="icon">
+              <FaAt onClick={handleMail} />
+            </div>
           </div>
         </div>
       </div>

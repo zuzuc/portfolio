@@ -36,6 +36,7 @@ Color Palette: 4272
   --yellow: #eead0e;
   --section-font: 3rem;
   --large-font: 3rem;
+  --medium-font: 2rem;
   --regular-font: 1.5rem;
   --small-font: 1rem;
   --large-size: 3rem;
@@ -53,6 +54,7 @@ Color Palette: 4272
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -207,7 +209,104 @@ body {
   cursor: pointer;
 }
 
+/*+++++++++++++++HOME+++++++++++++++++*/
+
+.home {
+  font-size: var(--medium-font);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.intro {
+  padding: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.menu-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menu-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font: inherit;
+  font-weight: 500;
+  list-style: none;
+  line-height: 1;
+  letter-spacing: 2px;
+  background-color: var(--dark-blue);
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
 /*+++++++++ABOUT+++++++++++*/
+
+.section-container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.875rem 0;
+}
+
+.headline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.section-font {
+  position: relative;
+  font-size: var(--section-font);
+  font-weight: bold;
+  padding: 0.5rem;
+  display: flex;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.section-font::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--dark-blue);
+  left: 50%;
+  bottom: -1vh;
+  transition: all 0.4s ease-in-out;
+}
+
+.section-font:hover {
+  color: var(--sea-water);
+  cursor: pointer;
+}
+
+.section-font:hover::after {
+  width: 100%;
+  left: 0;
+}
 
 .profile {
   padding: var(--large-size);
@@ -319,67 +418,6 @@ body {
 
 
 /*+++++++++PROJECTS++++++++*/
-
-.section-container {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 1.875rem 0;
-}
-
-.headline-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-}
-
-.section-font {
-  position: relative;
-  font-size: var(--section-font);
-  font-weight: bold;
-  padding: 0.5rem;
-  display: flex;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
-.section-font::after {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 2px;
-  background-color: var(--dark-blue);
-  left: 50%;
-  bottom: -1vh;
-  transition: all 0.4s ease-in-out;
-}
-
-.section-font:hover {
-  color: var(--sea-water);
-  cursor: pointer;
-}
-
-.section-font:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-.subheading-font {
-  font-size: var(--regular-font);
-  padding: 0.5rem;
-}
-
-.description-font {
-  font-size: var(--large-font);
-}
-
-.text-shadow {
-  text-shadow: 2.5px 2.5px 1px var(--mid-grey);
-}
 
 a {
   color: inherit;
@@ -512,7 +550,7 @@ a {
   .profile img {
     width: 70%;
   }
-  .subheading-font {
+  .intro {
     font: var(--regular-size);
   }
   .icon {
@@ -562,5 +600,107 @@ a {
   }
   .heading-primary-sub {
     font-size: 1.3rem;
+  }
+}
+
+/*+++++++++++++Navbar++++++++++++++++*/
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #282c34;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: var(--sea-water);
+    cursor: pointer;
+  }
+}
+
+/* Menu Items */
+.navbar-menu li {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  color: var(--sea-water);
+  font-weight: bold;
+  border-bottom: 2px solid var(--sea-water); /* Optional underline */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Button Group */
+.navbar-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-buttons .btn {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--sea-water);
+  }
+}
+
+/* Hamburger Menu Button */
+.hamburger-icon {
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none; /* Hide menu on smaller screens */
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar-buttons {
+    display: none;
   }
 }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
+import { FaBars, FaTimes, FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,13 +29,19 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Menu */}
-      <button className="navbar-hamburger" onClick={toggleMenu}>
-        ☰
-      </button>
+      <div className="hamburger-icon" onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
 
       {/* Menu Items */}
-      <ul className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
+      <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
+          <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+            About
+          </Link>
+          <Link to="/skills" onClick={() => setIsMenuOpen(false)}>
+            Skills
+          </Link>
           <Link to="/projects" onClick={() => setIsMenuOpen(false)}>
             Projects
           </Link>
@@ -44,7 +49,7 @@ const Navbar = () => {
       </ul>
 
       {/* Button Group */}
-      <div className={`navbar-buttons ${isMenuOpen ? "open" : ""}`}>
+      <div className={`navbar-buttons ${isMenuOpen ? "active" : ""}`}>
         <div className="btn">
           <FaLinkedinIn onClick={handleLinkedIn} />
         </div>
