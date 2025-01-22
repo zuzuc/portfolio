@@ -52,7 +52,7 @@ const skillData = [
     ],
   },
   {
-    type: "Themes",
+    type: "Topics",
     items: [
       { name: "Web Development" },
       { name: "Software Development" },
