@@ -20,7 +20,13 @@ const Skills = () => {
       <Navbar />
       <div className="skills-page">
         <div className="skills-header">
-          <h1>Skills</h1>
+          <h1>Profile</h1>
+          <span className="profile-intro">
+            Continuously discovering and learning new things gives me energy.
+            I’m always eager to expand my tech stack and stay up-to-date with
+            emerging technologies, while leveraging the knowledge I’ve gained in
+            web development, project management, and the academic field.{" "}
+          </span>
         </div>
         <div className="skills-container">
           {/* Render sections in the specified order */}

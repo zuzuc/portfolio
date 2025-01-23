@@ -58,6 +58,7 @@ const skillData = [
       { name: "Software Development" },
       { name: "Social & Environmental Justice" },
       { name: "Political Science & International Development" },
+      { name: "Citizen Participation" },
     ],
   },
 ];
