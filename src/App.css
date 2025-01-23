@@ -30,10 +30,12 @@ Color Palette: 4272
   --dark-blue: #1b242f;
   --white: #faf9f9;
   --light-grey: #f5f5f5;
+  --light-beige: #fefaf0;
   --sea-water: #69849b;
   --light-blue: #bcd2ee;
   --dusty-green: #3d6a66;
   --yellow: #eead0e;
+  --light-yellow: #f4cc68;
   --section-font: 3rem;
   --large-font: 3rem;
   --medium-font: 2rem;
@@ -256,6 +258,12 @@ body {
   padding: 1rem 2rem;
   transition: all 0.3s ease-out;
   cursor: pointer;
+  
+  &:hover {
+    border: 0.5px solid var(--sea-water);
+    background-color: var(--sea-water);
+    cursor: pointer;
+  }
 }
 
 /*+++++++++ABOUT+++++++++++*/
