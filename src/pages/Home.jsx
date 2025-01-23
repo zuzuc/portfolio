@@ -1,30 +1,29 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Skills from "../pages/Skills";
 
 function Home() {
   return (
     <>
       <Header />
       <div className="home">
-        <div className="intro">
+        <div className="about-me intro">
           I am an analytical and creative Web Developer and Project Manager with
           an interdisciplinary study background. Solving problems and constantly
           learning gives me great joy, hence I started a professional career as
           a developer. I support diversity and inclusive approaches in the tech
           industry and believe in the power of coding for transformative change.
         </div>
-        <div className="menu">
-          <ul className="menu-list">
-            <li className="menu-item">
-              <a href="/about">About</a>
+        <Skills />
+        <div className="menu-button-container">
+          <ul>
+            <li>
+              <a href="/about">My Journey</a>
             </li>
-            <li className="menu-item">
-              <a href="/skills">Profile</a>
-            </li>
-            <li className="menu-item">
+            <li>
               <a href="/projects">Projects</a>
-            </li >
+            </li>
           </ul>
         </div>
         <Footer />

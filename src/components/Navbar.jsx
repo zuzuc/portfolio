@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const handleLinkedIn = () => {
     window.open("https://www.linkedin.com/in/franziska-luig/");
@@ -28,19 +24,11 @@ const Navbar = () => {
         <Link to="/">FL</Link>
       </div>
 
-      {/* Hamburger Menu */}
-      <div className="hamburger-icon" onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
-      </div>
-
       {/* Menu Items */}
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
           <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-            About
-          </Link>
-          <Link to="/skills" onClick={() => setIsMenuOpen(false)}>
-            Profile
+            My Journey
           </Link>
           <Link to="/projects" onClick={() => setIsMenuOpen(false)}>
             Projects
