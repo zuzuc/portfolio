@@ -11,7 +11,7 @@ const Skills = () => {
       <Navbar />
       <div className="skills-page">
         <div className="skills-header">
-          <h1>Profil</h1>
+          <h1>Profile</h1>
         </div>
         <div className="skills-container">
           {skillData.map((section, index) => (
@@ -26,11 +26,14 @@ const Skills = () => {
               <div className="skills-grid">
                 {section.items.map((item, idx) => (
                   <div key={idx} className="skill-item">
-                    <img
-                      src={item.icon}
-                      alt={item.name}
-                      className="skill-icon"
-                    />
+                    {/* Only display the icon if it exists */}
+                    {item.icon && (
+                      <img
+                        src={item.icon}
+                        alt={item.name}
+                        className="skill-icon"
+                      />
+                    )}
                     <span className="skill-name">{item.name}</span>
                   </div>
                 ))}
