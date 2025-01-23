@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import skillData from "../data/skillData";
+import SideBySideSection from "../components/SideBySideSection";
 import "../App.css";
 import "./Skills.css";
 
@@ -28,33 +29,14 @@ const Skills = () => {
 
             // Handle "Project Management" and "Topics" together for side-by-side layout
             if (sectionType === "Project Management") {
-              const topicsSection = skillData.find((s) => s.type === "Topics");
+              const sectionTwo = skillData.find((s) => s.type === "Topics");
 
               return (
-                <div key={index} className="side-by-side-sections">
-                  {/* Render Project Management */}
-                  <div className="skill-section">
-                    <h2 className="section-title">{section.type}</h2>
-                    <div className="skills-grid">
-                      {section.items.map((item, idx) => (
-                        <div key={idx} className="skill-item">
-                          <span className="skill-name">{item.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Render Topics */}
-                  <div className="skill-section topics-section">
-                    <h2 className="section-title">{topicsSection.type}</h2>
-                    <div className="skills-grid">
-                      {topicsSection.items.map((item, idx) => (
-                        <div key={idx} className="skill-item">
-                          <span className="skill-name">{item.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <SideBySideSection
+                  key={index}
+                  section1={section}
+                  section2={sectionTwo}
+                />
               );
             }
 
