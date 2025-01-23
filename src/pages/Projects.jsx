@@ -8,10 +8,17 @@ function Projects() {
   return (
     <>
       <Navbar />
-      <div className="projects">
+      <div className="projects-container">
         <div className="section-container">
           <div className="headline-container">
-            <div className="section-font">Projects</div>
+            <div className="section-title">
+              <h1>Projects</h1>
+            </div>
+            <div>
+            <span className="intro">
+              A selection of projects I´ve been working on so far, as part of the privately, as part of the Coding Bootcamp or at work{" "}
+            </span>
+          </div>
           </div>
           <div className="grids-container">
             <div className="grids-wrapper">

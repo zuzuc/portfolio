@@ -10,7 +10,9 @@ const About = () => {
       <div className="about">
         <div className="section-container">
           <div className="headline-container">
-            <div className="section-font">Welcome to my profile!</div>
+            <div className="section-title">
+              <h1>My Journey</h1>
+            </div>
             <div className="profile">
               <img src={profileImg} alt="Franziska Luig" />
             </div>
