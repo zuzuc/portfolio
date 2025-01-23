@@ -1,10 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import skillData from "../data/skillData";
 import SideBySideSection from "../components/SideBySideSection";
 import "../App.css";
-import "./Skills.css";
 
 const Skills = () => {
   // Define the custom order for sections
@@ -16,17 +13,20 @@ const Skills = () => {
   ];
 
   return (
-    <>
-      <Navbar />
+    <div>
       <div className="skills-page">
-        <div className="skills-header">
-          <h1>Profile</h1>
-          <span className="profile-intro">
-            Continuously discovering and learning new things gives me energy.
-            I’m always eager to expand my tech stack and stay up-to-date with
-            emerging technologies, while leveraging the knowledge I’ve gained in
-            web development, project management, and the academic field.{" "}
-          </span>
+        <div className="headline-container skills">
+          <div className="section-title skills">
+            <h1>Profile</h1>
+          </div>
+          <div>
+            <span className="intro">
+              Continuously discovering and learning new things gives me energy.
+              I’m always eager to expand my tech stack and stay up-to-date with
+              emerging technologies, while leveraging the knowledge I’ve gained
+              in web development, project management, and the academic field.{" "}
+            </span>
+          </div>
         </div>
         <div className="skills-container">
           {/* Render sections in the specified order */}
@@ -55,7 +55,7 @@ const Skills = () => {
             return (
               <div key={index} className="skill-section">
                 <h2
-                  className={`section-title ${
+                  className={`sub-section-title ${
                     section.type === "Languages" ? "languages" : ""
                   }`}
                 >
@@ -81,8 +81,7 @@ const Skills = () => {
           })}
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 

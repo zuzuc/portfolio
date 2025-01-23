@@ -5,7 +5,7 @@ const SideBySideSection = ({ section1, section2 }) => {
     <div className="side-by-side-sections">
       {/* Render First Section */}
       <div className="skill-section">
-        <h2 className="section-title">{section1.type}</h2>
+        <h2 className="sub-section-title">{section1.type}</h2>
         <div className="skills-grid">
           {section1.items.map((item, idx) => (
             <div key={idx} className="skill-item">
@@ -17,7 +17,7 @@ const SideBySideSection = ({ section1, section2 }) => {
 
       {/* Render Second Section */}
       <div className="skill-section">
-        <h2 className="section-title">{section2.type}</h2>
+        <h2 className="sub-section-title">{section2.type}</h2>
         <div className="skills-grid">
           {section2.items.map((item, idx) => (
             <div key={idx} className="skill-item">
