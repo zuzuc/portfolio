@@ -19,7 +19,7 @@ const Skills = () => {
       <Navbar />
       <div className="skills-page">
         <div className="skills-header">
-          <h1>Profile</h1>
+          <h1>Skills</h1>
         </div>
         <div className="skills-container">
           {/* Render sections in the specified order */}

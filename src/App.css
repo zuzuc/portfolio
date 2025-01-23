@@ -36,6 +36,8 @@ Color Palette: 4272
   --dusty-green: #3d6a66;
   --yellow: #eead0e;
   --light-yellow: #f4cc68;
+  --color-accent: #c23a00;
+  --bg-gradient-to-right: linear-gradient(to right, var(--yellow), var(--color-accent));
   --section-font: 3rem;
   --large-font: 3rem;
   --medium-font: 2rem;
