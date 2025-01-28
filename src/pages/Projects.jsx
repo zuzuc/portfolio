@@ -25,7 +25,7 @@ function Projects() {
               {projectData.map((project) => (
                 <Card
                   key={project.title}
-                  title={project.title}
+                  // title={project.title}
                   type={project.type}
                   image={project.image}
                   techStacks={project.techStacks}
