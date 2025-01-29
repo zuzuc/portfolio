@@ -12,23 +12,22 @@ function Card(props) {
     >
       <a href={props.url} target="_blank" rel="noopener noreferrer">
         <div className="card-overlay">
-          <div className="card-image">
+          {/* Card image should expand when hovered */}
+          <div className={`card-image ${isHovered ? "hovered" : ""}`}>
             <img src={props.image} alt={props.alt} />
           </div>
 
           {/* Remove card-details completely on hover */}
-          {!isHovered && (
-            <div className="card-details">
-              <div className="type">{props.type}</div>
-              <div className="stacks">
-                {props.techStacks.map((techStack, index) => (
-                  <div className="stack" key={index}>
-                    {techStack}
-                  </div>
-                ))}
-              </div>
+          <div className={`card-details ${isHovered ? "hidden" : ""}`}>
+            <div className="type">{props.type}</div>
+            <div className="stacks">
+              {props.techStacks.map((techStack, index) => (
+                <div className="stack" key={index}>
+                  {techStack}
+                </div>
+              ))}
             </div>
-          )}
+          </div>
 
           {/* Visit Website Button - Always Visible on Hover */}
           {isHovered && (
