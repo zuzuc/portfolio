@@ -1,42 +1,37 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Card from "../components/Card";
+import ProjectCard from "../components/ProjectCard";
 import projectData from "./../data/projectData";
 
 function Projects() {
   return (
     <>
       <Navbar />
+      <div className="section-title">
+        <h1>Web Development</h1>
+      </div>
+      <div className="section-title">
+        <h2>Portfolio</h2>
+      </div>
+      <div>
+        <span className="intro">
+          A selection of projects I´ve been working on so far, as part of the
+          privately, as part of the Coding Bootcamp or at work{" "}
+        </span>
+      </div>
+
       <div className="projects-container">
-        <div className="section-container">
-          <div className="headline-container">
-            <div className="section-title">
-              <h1>Projects</h1>
-            </div>
-            <div>
-            <span className="intro">
-              A selection of projects I´ve been working on so far, as part of the privately, as part of the Coding Bootcamp or at work{" "}
-            </span>
-          </div>
-          </div>
-          <div className="grids-container">
-            <div className="grids-wrapper">
-              {projectData.map((project) => (
-                <Card
-                  key={project.title}
-                  // title={project.title}
-                  type={project.type}
-                  image={project.image}
-                  techStacks={project.techStacks}
-                  // description={project.description}
-                  alt={`Screenshot of ${project.title}`}
-                  url={project.url}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        {projectData.map((project) => (
+          <ProjectCard
+            key={project.title}
+            title={project.title}
+            tags={project.techStacks}
+            description={project.description}
+            image={project.image}
+            url={project.url}
+          />
+        ))}
       </div>
       <Footer />
     </>

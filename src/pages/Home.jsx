@@ -18,11 +18,11 @@ function Home() {
         <Skills />
         <div className="menu-button-container">
           <ul>
-            <li>
+            {/* <li>
               <a href="/about">My Journey</a>
-            </li>
+            </li> */}
             <li>
-              <a href="/projects">Projects</a>
+              <a href="/portfolio">Portfolio</a>
             </li>
           </ul>
         </div>
