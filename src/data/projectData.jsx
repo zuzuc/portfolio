@@ -1,8 +1,24 @@
+import taskmanagerImg from "./../assets/images/taskmanager.png";
 import mapstoriesImg from "./../assets/images/mapstories.JPG";
 import pastalavistaImg from "./../assets/images/pastalavista.JPG"
 import animalblogImg from "./../assets/images/animalblog.JPG"
 
 const projectData = [
+    {
+        title: 'Task Manager App',
+        image: taskmanagerImg,
+        alt: 'Image of Task Manager App',
+        url: 'https://taskfocus.netlify.app/',
+        type: 'Full-Stack',
+        techStacks: [
+            'HTML',
+            'CSS',
+            'React',
+            'Local Storage',
+        ],
+        description:
+            'A simple yet functional task management application built with React. The app is state-managed and persists data using localStorage. It is lightweight, interactive, and great for personal productivity!'
+    },
     {
         title: 'MapStories',
         image: mapstoriesImg,
