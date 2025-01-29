@@ -27,11 +27,8 @@ const Navbar = () => {
       {/* Menu Items */}
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
-          <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-            My Journey
-          </Link>
-          <Link to="/projects" onClick={() => setIsMenuOpen(false)}>
-            Projects
+          <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>
+            Portfolio
           </Link>
         </li>
       </ul>
