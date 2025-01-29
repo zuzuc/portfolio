@@ -502,6 +502,46 @@ a {
   text-decoration: none;
 }
 
+.web-dev-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  font-size: var(--section-title);
+  padding: 1rem;
+}
+
+.web-dev-title {
+  position: relative;
+  background: white; /* Background color to "hide" the line behind text */
+  padding: 0 1rem; /* Adds spacing so the line doesn't touch text */
+  z-index: 1; /* Ensures the text stays above the line */
+}
+
+.web-dev-title-container::before {
+  content: "";
+  position: absolute;
+  background: var(--yellow);
+  height: 0.1rem;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  z-index: 0; /* Places the line behind the text */
+}
+
+.portfolio-section{
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.portfolio-intro {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
 .project-card {
   display: flex;
   width: 100%;
@@ -578,7 +618,6 @@ a {
 
 .project-image {
   position: relative;
-  width: 40%;
   text-align: right;
   align-self: flex-start;
   border-radius: 4px;
@@ -586,6 +625,7 @@ a {
   overflow: visible;
   transform: translate(-15%, 60px);
   transition: all 0.3s ease;
+  /* display: inline-block; */
 }
 
 .fly-in-from-right {
@@ -601,14 +641,13 @@ a {
 }
 
 .cover:hover {
-  transform: translate(-.5rem, -.5rem);
-  transition: all .2s ease-out;
+  transform: translate(-0.5rem, -0.5rem);
+  transition: all 0.2s ease-out;
 }
 
 .laptop-frame {
   width: 100%;
   display: block;
-  max-width: 340px;
   height: auto;
 }
 
@@ -627,6 +666,23 @@ a {
   width: 67%;
   height: 42%;
   border-radius: 2px;
+}
+
+.visit-website-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: var(--dark-blue);
+  padding: 1rem 1.7rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--dark-blue);
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 /*+++++++++++++Navbar++++++++++++++++*/
@@ -769,6 +825,23 @@ a {
 
   .side-by-side-sections {
     flex-direction: column;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-image {
+    flex-basis: 100%;
+    transform: unset;
+    padding: 0.5rem 1rem;
+    min-width: 200px;
+    max-width: 260px;
+  }
+
+  .screenshot {
+    left: 18%;
+    width: 64%;
   }
 }
 
