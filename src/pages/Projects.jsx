@@ -8,17 +8,17 @@ function Projects() {
   return (
     <>
       <Navbar />
-      <div className="section-title">
-        <h1>Web Development</h1>
+      <div className="web-dev-title-container">
+        <h1 className="web-dev-title">Web Development</h1>
       </div>
-      <div className="section-title">
-        <h2>Portfolio</h2>
-      </div>
-      <div>
-        <span className="intro">
+      <div className="portfolio-section">
+        <div className="section-title">
+          <h2>Portfolio</h2>
+        </div>
+        <article className="portfolio-intro">
           A selection of projects I´ve been working on so far, as part of the
           privately, as part of the Coding Bootcamp or at work{" "}
-        </span>
+        </article>
       </div>
 
       <div className="projects-container">
