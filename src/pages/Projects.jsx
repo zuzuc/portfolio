@@ -11,7 +11,7 @@ function Projects() {
       <div className="web-dev-title-container">
         <h1 className="web-dev-title">Web Development</h1>
       </div>
-      <div className="portfolio-section">
+      <div className="headline-container">
         <div className="section-title">
           <h2>Portfolio</h2>
         </div>
