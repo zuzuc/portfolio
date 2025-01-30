@@ -34,21 +34,24 @@ Color Palette: 4272
   --sea-water: #69849b;
   --light-blue: #bcd2ee;
   --dusty-green: #3d6a66;
-  --purple:  rgba(147, 111, 213, 0.801);
+  --purple: rgba(147, 111, 213, 0.801);
   --shining-green: rgba(40, 180, 133, 0.801);
   --yellow: #eead0e;
-  --light-yellow: #f4cc68;
+  --light-yellow: #f4cc68; 
+  --ultra-light-yellow: #fdf4b4 ;
+  --orange: #f9c584;
   --bg-gradient-to-right: linear-gradient(
     to right,
     var(--shining-green),
     var(--purple)
   );
+  --highlight: linear-gradient(to top, transparent 5%, #fdf4b4 5%, #fdf4b4 37%, transparent 37%);
 
   --large-font: 2rem;
   --medium-font: 1.5rem;
+  --fix-font: 1.2rem;
   --regular-font: 1rem;
   --small-font: 0.8rem;
-  --large-size: 3rem;
 
   --box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -144,7 +147,7 @@ body {
 
 .heading-primary--main1 {
   display: block;
-  /* font-size: 0.5rem; */
+  font-size: var(--large-font);
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
@@ -154,7 +157,7 @@ body {
 
 .heading-primary--main2 {
   display: block;
-  /* font-size: 4rem; */
+  font-size: var(--large-font);
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInRight;
@@ -165,7 +168,7 @@ body {
 .heading-primary--sub {
   color: white;
   display: block;
-  /* font-size: 3rem; */
+  font-size: var(--medium-font);
   font-weight: 500;
   letter-spacing: 1.75rem;
 }
@@ -204,6 +207,8 @@ body {
 }
 
 /*+++++++++ICONS+++++++*/
+
+/* Social-icons*/
 
 .icons-container {
   display: flex;
@@ -253,23 +258,16 @@ body {
 }
 
 .section-title {
-  color: var(--dark-blue);
-  position: relative;
-  font-weight: bold;
-  padding: 0.5rem;
   display: flex;
+  width: fit-content;
+  font-size: var(--medium-font);
+  font-weight: bold;
+  color: var(--dark-blue);
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   margin-bottom: 1rem;
-}
-
-.section-title::after {
-  position: absolute;
-  content: "";
-  background-color: var(--dark-blue);
-  bottom: -1vh;
-  transition: all 0.4s ease-in-out;
+  background: var(--highlight);
 }
 
 .section-title:hover {
@@ -282,15 +280,8 @@ body {
   left: 0;
 }
 
-.intro {
-  display: flex;
-  text-align: left;
-  font-weight: 600;
-  margin: 0 auto;
-}
-
 .profile {
-  padding: var(--large-size);
+  padding: 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -354,24 +345,32 @@ body {
   }
 }
 
-.about-me {
-  padding: 2rem;
+.quote-container {
   display: flex;
   flex-direction: column;
-  width: min(100%, 480px);
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  background-color: var(--dark-blue);
+  color: white;
   margin: 0 auto;
-  background-color: var(--light-beige);
-  border-style: solid;
-  border-radius: 20px;
-  border-width: 1px 5px 5px 1px;
-  border-color: var(--dark-blue);
+  padding: 3rem;
+}
+
+.quote-icon {
+  width: 1.875rem;
+  height: auto; 
+  margin-bottom: 1rem;
+}
+
+.quote {
+  text-align: center;
 }
 
 /*++++++++++SKILLS************/
 
 .skills-page {
   background-color: white;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   width: min(100%, 1040px);
@@ -388,6 +387,13 @@ body {
   margin-bottom: 3rem;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.skills-intro {
+  display: flex;
+  text-align: left;
+  font-weight: 600;
+  margin: 0 auto;
 }
 
 /* Container for the side-by-side sections */
@@ -438,14 +444,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.625rem;
+  gap: 1.625rem;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 10px 22px;
   background: transparent;
   border: 1px solid var(--yellow);
   border-radius: 32px;
@@ -458,8 +464,8 @@ body {
 }
 
 .skill-icon {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .skill-name {
@@ -500,12 +506,6 @@ a {
   left: 0;
   top: 50%;
   z-index: 0; /* Places the line behind the text */
-}
-
-.portfolio-section{
-  text-align: left;
-  margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .portfolio-intro {
@@ -724,9 +724,9 @@ a {
 /*++++++++++++FOOTER++++++++++*/
 
 .footer {
-  height: 30vh;
+  height: 40vh;
   background-color: var(--dark-blue);
-  padding: 5rem 0 0 0;
+  padding: 3rem 0 0 0;
   background-size: cover;
 }
 
@@ -814,23 +814,42 @@ a {
 }
 
 @media only screen and (max-width: 480px) {
-  .header__text-box {
-    width: 40vw;
+
+  .header {
+    height: 50vh;
   }
+ 
+  .header__text-box {
+    width: 66vw;
+  }
+
   .heading-primary {
     text-align: center;
     word-break: break-word;
     hyphens: manual; /* Optional, ensures proper hyphenation with soft hyphens */
   }
+
   .heading-primary--main1,
   .heading-primary--main2 {
     display: block;
-    font-size: 2rem;
+    font-size: var(--fix-font);
     word-wrap: break-word; /* Ensures words break if necessary */
+    letter-spacing: 1rem;
   }
+
   .heading-primary--sub {
-    font-size: 1.3rem;
+    font-size: var(--fix-font);
   }
+
+  .typewriter {
+    margin: 2vh;
+    margin-bottom: 2rem;
+  }
+
+  .headline-container {
+    width: 70vw;
+  }
+
   .profile img {
     width: 50%;
   }
@@ -842,6 +861,10 @@ a {
   .grid-card {
     width: 100%; /* Ensures cards take full width in small viewports */
     margin: 0.5rem 0; /* Adds spacing between stacked cards */
+  }
+
+  .menu-button-container {
+    margin: 10px auto;
   }
 }
 
@@ -855,7 +878,7 @@ a {
   .header-primary {
     font-size: 2rem;
   }
-  .heading-primary-sub {
+  .heading-primary--sub {
     font-size: 1.3rem;
   }
 }
