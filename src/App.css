@@ -34,22 +34,21 @@ Color Palette: 4272
   --sea-water: #69849b;
   --light-blue: #bcd2ee;
   --dusty-green: #3d6a66;
+  --purple:  rgba(147, 111, 213, 0.801);
+  --shining-green: rgba(40, 180, 133, 0.801);
   --yellow: #eead0e;
   --light-yellow: #f4cc68;
-  --color-accent: #c23a00;
   --bg-gradient-to-right: linear-gradient(
     to right,
-    var(--yellow),
-    var(--color-accent)
+    var(--shining-green),
+    var(--purple)
   );
-  --section-title: 2rem;
-  --large-font: 3rem;
-  --medium-font: 2rem;
-  --regular-font: 1.5rem;
-  --small-font: 1rem;
+
+  --large-font: 2rem;
+  --medium-font: 1.5rem;
+  --regular-font: 1rem;
+  --small-font: 0.8rem;
   --large-size: 3rem;
-  --regular-size: 1rem;
-  --small-size: 0.5rem;
 
   --box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -66,7 +65,7 @@ Color Palette: 4272
 }
 
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   scroll-behavior: smooth;
 }
 
@@ -130,7 +129,7 @@ body {
 
 .header__text-box {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -140,12 +139,12 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .heading-primary--main1 {
   display: block;
-  font-size: 4rem;
+  /* font-size: 0.5rem; */
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
@@ -155,7 +154,7 @@ body {
 
 .heading-primary--main2 {
   display: block;
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInRight;
@@ -166,7 +165,7 @@ body {
 .heading-primary--sub {
   color: white;
   display: block;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: 500;
   letter-spacing: 1.75rem;
 }
@@ -217,8 +216,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   border: 0.5px solid var(--white);
   border-radius: 50%;
   margin: 1rem;
@@ -263,7 +262,6 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   margin-bottom: 1rem;
-  font-size: var(--section-title);
 }
 
 .section-title::after {
@@ -287,7 +285,6 @@ body {
 .intro {
   display: flex;
   text-align: left;
-  font-size: 1.5rem;
   font-weight: 600;
   margin: 0 auto;
 }
@@ -367,35 +364,10 @@ body {
   border-style: solid;
   border-radius: 20px;
   border-width: 1px 5px 5px 1px;
-  border-color: var(--yellow);
+  border-color: var(--dark-blue);
 }
 
 /*++++++++++SKILLS************/
-
-.headline-container.skills {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-}
-
-.section-title.skills {
-  width: 100%;
-}
-
-.section-title.skills::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0.2rem;
-  margin-left: 0;
-  background: var(--bg-gradient-to-right);
-}
-
-.section-title.skills::after {
-  background-color: white;
-}
 
 .skills-page {
   background-color: white;
@@ -428,6 +400,7 @@ body {
 .skill-section {
   flex: 1;
   min-width: 0;
+  padding-bottom: 5rem;
 }
 
 .sub-section-title {
@@ -455,7 +428,7 @@ body {
 
 .sub-section-title::first-letter,
 .project-title::first-letter {
-  font-size: 3rem;
+  font-size: var(--large-font);
   font-weight: 900;
   color: var(--yellow);
   padding-right: 2px;
@@ -464,24 +437,24 @@ body {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.625rem;
+  justify-content: center;
+  gap: 2.625rem;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 12px;
-  background-color: var(--light-yellow);
-  border: 0.5px solid var(--yellow);
-  border-radius: 4px;
-  font-size: 1.2rem;
-  transition: transform 0.2s ease;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid var(--yellow);
+  border-radius: 32px;
+  transition: transform 0.3s ease;
 }
 
 .skill-item:hover {
   transform: scale(1.05);
-  background: var(--yellow);
+  background: var(--light-yellow);
 }
 
 .skill-icon {
@@ -490,7 +463,7 @@ body {
 }
 
 .skill-name {
-  font-size: 1.2rem;
+  font-size: var(--small-font);
   font-weight: 600;
   padding: 0.5rem;
   color: var(--dark-blue);
@@ -508,7 +481,6 @@ a {
   align-items: center;
   position: relative;
   width: 100%;
-  font-size: var(--section-title);
   padding: 1rem;
 }
 
@@ -537,7 +509,6 @@ a {
 }
 
 .portfolio-intro {
-  font-size: 1.5rem;
   font-weight: 600;
   padding: 0.5rem;
 }
@@ -570,7 +541,6 @@ a {
   width: 100%;
   overflow: clip;
   padding-top: 20px;
-  font-size: 2rem;
   font-weight: 800;
   color: var(--dark-blue);
   margin-bottom: 1rem;
@@ -591,13 +561,12 @@ a {
   background-color: var(--light-yellow);
   color: #333;
   padding: 5px 10px;
-  font-size: 1.2rem;
+  font-size: var(--small-font);
   border-radius: 5px;
   margin-right: 5px;
 }
 
 .project-description {
-  font-size: 1.5rem;
   color: #333;
   line-height: 1.6;
 }
@@ -606,8 +575,7 @@ a {
   margin-top: 10px;
   padding: 10px 15px;
   border: 1px solid #333;
-  background-color: white;
-  font-size: 1rem;
+  background: transparent;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -675,8 +643,8 @@ a {
   transform: translate(-50%, -50%);
   color: white;
   background-color: var(--dark-blue);
-  padding: 1rem 1.7rem;
-  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+  font-size: var(--small-font);
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -701,7 +669,7 @@ a {
 
 /* Logo */
 .navbar-logo a {
-  font-size: 2rem;
+  font-size: var(--medium-font);
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -725,7 +693,7 @@ a {
 .navbar-menu li a {
   color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: var(--medium-font);
   transition: color 0.3s ease;
 }
 
@@ -744,7 +712,7 @@ a {
 }
 
 .navbar-buttons .btn {
-  font-size: 1.5rem;
+  font-size: var(--medium-font);
   color: white;
   cursor: pointer;
 
@@ -785,13 +753,13 @@ a {
 
 @media only screen and (max-width: 768px) {
   .profile {
-    padding: var(--small-size);
+    padding: 0.5rem;
   }
   .profile img {
     width: 70%;
   }
   .intro {
-    font: var(--regular-size);
+    font: var(--regular-font);
   }
   .icon {
     height: 3.5rem;
@@ -820,7 +788,7 @@ a {
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: var(--medium-font);
   }
 
   .side-by-side-sections {
@@ -879,7 +847,7 @@ a {
 
 @media (min-aspect-ratio: 16/9) {
   .profile {
-    padding: var(--regular-size);
+    padding: var(--regular-font);
   }
   .profile img {
     width: 12.5rem;
