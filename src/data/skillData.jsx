@@ -56,6 +56,7 @@ const skillData = [
     items: [
       { name: "Web Development" },
       { name: "Software Development" },
+      { name: "Web Accessibility"},
       { name: "Intersectional Feminism" },
       { name: "Social & Environmental Justice" },
       { name: "Climate Change & Migration" },
