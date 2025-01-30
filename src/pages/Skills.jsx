@@ -15,12 +15,12 @@ const Skills = () => {
   return (
     <div>
       <div className="skills-page">
-        <div className="headline-container skills">
-          <div className="section-title skills">
-            <h1>Profile</h1>
+        <div className="headline-container">
+          <div className="section-title">
+            <h2>Profile</h2>
           </div>
           <div>
-            <span className="intro">
+            <span className="skills-intro">
               Continuously discovering and learning new things gives me energy.
               I’m always eager to expand my tech stack and stay up-to-date with
               emerging technologies, while leveraging the knowledge I’ve gained
