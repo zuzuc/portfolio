@@ -818,7 +818,7 @@ a {
 /*++++++++++++FOOTER++++++++++*/
 
 .footer {
-  height: 30vh;
+  height: 25vh;
   background-color: var(--dark-blue);
   padding: 2rem 0 0 0;
   background-size: cover;
