@@ -18,13 +18,13 @@ function Footer() {
     <footer className="footer">
       <div className="icons-container">
         <div className="icon">
-          <FaLinkedinIn onClick={handleLinkedIn} />
+          <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
         </div>
         <div className="icon">
-          <FaGithub onClick={handleGit} />
+          <FaGithub onClick={handleGit} aria-label="GitHub"/>
         </div>
         <div className="icon">
-          <FaAt onClick={handleMail} />
+          <FaAt onClick={handleMail} aria-label="Email"/>
         </div>
       </div>
       <div className="copyright">© Franziska Luig 2025</div>

@@ -38,13 +38,13 @@ const Navbar = () => {
       {/* Button Group */}
       <div className={`navbar-buttons ${isMenuOpen ? "active" : ""}`}>
         <div className="btn">
-          <FaLinkedinIn onClick={handleLinkedIn} />
+          <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
         </div>
         <div className="btn">
-          <FaGithub onClick={handleGit} />
+          <FaGithub onClick={handleGit} aria-label="GitHub"/>
         </div>
         <div className="btn">
-          <FaAt onClick={handleMail} />
+          <FaAt onClick={handleMail} aria-label="Email"/>
         </div>
       </div>
     </nav>
