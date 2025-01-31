@@ -10,6 +10,7 @@ function Home() {
 
   const scrollToSection = () => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    sectionRef.current?.focus(); // Ensure the focus moves to the target section
   };
 
   return (
@@ -21,6 +22,7 @@ function Home() {
           className="scroll-down-btn"
           onClick={scrollToSection}
           aria-label="Scroll down"
+          tabIndex="0"
         >
           <div className="pointer" aria-hidden="true"></div>
         </button>
@@ -29,7 +31,7 @@ function Home() {
       <div className="home">
         <div className="quote-picture-container" ref={sectionRef}>
           <div className="quote-container">
-            <img className="quote-icon" src={quote} alt="Quote icon" />
+            <img className="quote-icon" src={quote} alt="Quote icon, a symbol of inspirational message" />
             <p className="quote">
               I am an analytical and creative Web Developer and Project Manager
               with an interdisciplinary study background. Solving problems and
@@ -40,7 +42,7 @@ function Home() {
             </p>
           </div>
           <div className="profile-pic">
-            <img src={profileImg} alt="Picture of Franziska Luig" />
+            <img src={profileImg} alt="Profile photo of Franziska Luig" />
           </div>
         </div>
         <Skills />

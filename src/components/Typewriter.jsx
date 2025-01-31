@@ -51,7 +51,7 @@ function Typewriter({ onFinishAnimation, text }) {
     [isDeleting, text, typedContent],
   );
 
-  return <div className="typewriter">{typedContent}</div>;
+  return <div className="typewriter" role="status" aria-live="polite">{typedContent}</div>;
 }
 
 Typewriter.propTypes = {

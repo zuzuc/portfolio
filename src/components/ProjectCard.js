@@ -25,7 +25,12 @@ function ProjectCard({ title, tags, description, image, url }) {
           ))}
         </div>
         <p className="project-description">{description}</p>
-        <a href={url} target="_blank" rel="noopener noreferrer">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Visit ${title} website`}
+        >
           <button className="project-button">Visit Website</button>
         </a>
       </div>
