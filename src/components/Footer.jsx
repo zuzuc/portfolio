@@ -1,43 +1,35 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from "react";
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
 function Footer() {
-    const history = useHistory();
-    const handleLinkedIn = (e) => {
-        let path = window.open('https://www.linkedin.com/in/franziska-luig/')
-        history.push(path);
-    };
+  const handleLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/franziska-luig/");
+  };
 
-    const handleGit = (e) => {
-        let path = window.open('https://github.com/zuzuc');
-        history.push(path);
-    };
+  const handleGit = () => {
+    window.open("https://github.com/zuzuc");
+  };
 
-    const handleMail = (e) => {
-        let path = window.open('mailto:franziska.luig@posteo.de');
-        history.push(path);
-    };
+  const handleMail = () => {
+    window.open("mailto:franziska.luig@posteo.de");
+  };
 
-
-    return (
-        <footer className="footer">
-          {/* <div className="section-container">
-            <div className="headline-container">
-              <div className="section-font"></div>
-                <div className="subheading-font"> */}
-                <div className="icons-container">
-                        <div className="icon"><FaLinkedinIn onClick={handleLinkedIn} /></div>  
-                        <div className="icon"><FaGithub onClick={handleGit} /></div>
-                        <div className="icon"><FaAt onClick={handleMail} /></div>
-                </div>
-                <div className="copyright">© Franziska Luig 2021</div>
-
-        </footer>
-        //     </div>
-        //   </div> 
-        // </div>
-    )
-};
+  return (
+    <footer className="footer">
+      <div className="icons-container">
+        <div className="icon">
+          <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
+        </div>
+        <div className="icon">
+          <FaGithub onClick={handleGit} aria-label="GitHub"/>
+        </div>
+        <div className="icon">
+          <FaAt onClick={handleMail} aria-label="Email"/>
+        </div>
+      </div>
+      <div className="copyright">© Franziska Luig 2025</div>
+    </footer>
+  );
+}
 
 export default Footer;
