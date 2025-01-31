@@ -29,7 +29,7 @@ function ProjectCard({ title, tags, description, image, url }) {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Visit ${title} website`}
+          aria-label={`Visit the website for ${title}, opens in a new tab`}
         >
           <button className="project-button">Visit Website</button>
         </a>
@@ -50,6 +50,7 @@ function ProjectCard({ title, tags, description, image, url }) {
               target="_blank"
               rel="noopener noreferrer"
               className="visit-website-btn"
+              aria-label={`Visit the website for ${title}, opens in a new tab`}
             >
               Visit Website
             </a>

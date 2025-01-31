@@ -18,7 +18,7 @@ const Skills = () => {
         <div className="menu-button-container">
           <ul>
             <li>
-              <a href="/portfolio">Portfolio</a>
+              <a href="/portfolio" aria-label="Go to Portfolio Page">Portfolio</a>
             </li>
           </ul>
         </div>

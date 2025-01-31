@@ -22,7 +22,6 @@ function Home() {
           className="scroll-down-btn"
           onClick={scrollToSection}
           aria-label="Scroll down"
-          tabIndex="0"
         >
           <div className="pointer" aria-hidden="true"></div>
         </button>
@@ -31,7 +30,7 @@ function Home() {
       <div className="home">
         <div className="quote-picture-container" ref={sectionRef}>
           <div className="quote-container">
-            <img className="quote-icon" src={quote} alt="Quote icon, a symbol of inspirational message" />
+            <img className="quote-icon" src={quote} alt="Icon of a quotation mark" />
             <p className="quote">
               I am an analytical and creative Web Developer and Project Manager
               with an interdisciplinary study background. Solving problems and
