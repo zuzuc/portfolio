@@ -928,6 +928,10 @@ a {
     width: 100%; /* Ensures cards take full width in small viewports */
     margin: 0.5rem 0; /* Adds spacing between stacked cards */
   }
+
+  .headline-container {
+    padding: 0 1rem;
+  }
 }
 
 @media (min-aspect-ratio: 16/9) {
