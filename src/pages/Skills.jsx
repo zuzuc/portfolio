@@ -15,7 +15,14 @@ const Skills = () => {
   return (
     <div>
       <div className="skills-page">
-        <div className="headline-container">
+        <div className="menu-button-container">
+          <ul>
+            <li>
+              <a href="/portfolio">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+        <div className="profile-container">
           <div className="section-title">
             <h2>Profile</h2>
           </div>
