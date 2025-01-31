@@ -2,12 +2,13 @@
 
 :root {
   --dark-blue: #1b242f;
-  --ultra-light-yellow:#fffef8;
+  --ultra-light-yellow: #fffef8;
   --light-yellow: #fdf4b4;
   --sea-water: #69849b;
   --light-blue: #bcd2ee;
   --dusty-green: #3d6a66;
-  --purple: rgba(147, 111, 213, 0.801);
+  --purple: rgba(147, 111, 213, 0.801); /*#936fd5cc*/
+  --light-purple: #f3f1fc;
   --shining-green: rgba(40, 180, 133, 0.801);
 
   --bg-gradient-to-right: linear-gradient(
@@ -15,7 +16,13 @@
     var(--shining-green),
     var(--purple)
   );
-  --highlight: linear-gradient(to top, transparent 5%, #fdf4b4 5%, #fdf4b4 37%, transparent 37%);
+  --highlight: linear-gradient(
+    to top,
+    transparent 5%,
+    #fdf4b4 5%,
+    #fdf4b4 37%,
+    transparent 37%
+  );
 
   --extra-large-font: 2.5rem;
   --large-font: 2rem;
@@ -101,7 +108,7 @@ body {
 }
 
 .header {
-  height: 95vh;
+  height: 75vh;
   background-image: linear-gradient(
     to right bottom,
     rgba(147, 111, 213, 0.801),
@@ -110,7 +117,7 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
 }
 
 .header__text-box {
@@ -149,7 +156,7 @@ body {
 }
 
 .heading-primary--sub {
-  color:white;
+  color: white;
   display: block;
   font-size: var(--medium-font);
   font-weight: 500;
@@ -219,6 +226,61 @@ body {
   background-color: var(--sea-water);
   color: white;
   cursor: pointer;
+}
+
+
+/*++++++SCROLL BUTTON++++++++*/
+@keyframes slideDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(4rem) rotate(45deg);
+  }
+}
+
+.scroll-down-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.scroll-down-btn {
+  height: 6rem;
+  width: 3rem;
+  background-color: transparent;
+  color: var(--purple);
+  cursor: pointer;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid var(--purple);
+  margin: 2rem;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-down-btn:hover {
+  background-color: var(--light-purple);
+}
+
+.pointer {
+  height: 1rem;
+  width: 1rem;
+  border-right: 3px solid var(--purple);
+  border-bottom: 3px solid var(--purple);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 5px;
+  animation: slideDown 1.5s linear infinite;
 }
 
 /*+++++++++GENERAL+++++++++++*/
@@ -341,12 +403,13 @@ body {
 
 .quote-icon {
   width: 1.875rem;
-  height: auto; 
+  height: auto;
   margin-bottom: 1rem;
 }
 
 .quote {
   text-align: center;
+  letter-spacing: 0.2rem;
 }
 
 /*++++++++++SKILLS************/
@@ -373,9 +436,9 @@ body {
 
 .skills-intro {
   display: flex;
-  text-align: left;
   font-weight: 600;
   margin: 0 auto;
+  letter-spacing: 0.2rem;
 }
 
 /* Container for the side-by-side sections */
@@ -576,7 +639,6 @@ a {
   overflow: visible;
   transform: translate(-15%, 60px);
   transition: all 0.3s ease;
-  /* display: inline-block; */
 }
 
 .fly-in-from-right {
@@ -652,18 +714,37 @@ a {
 
 /* Logo */
 .navbar-logo a {
+  position: relative;
   font-size: var(--medium-font);
   font-weight: bold;
   color: white;
   text-decoration: none;
   display: flex;
-  justify-content: center;
   align-items: center;
 
   &:hover {
-    color: var(--sea-water);
+    color: var(--light-yellow);
     cursor: pointer;
   }
+}
+
+.logo-f {
+  position: relative;
+  top: -5px;
+}
+
+.logo-l {
+  position: relative;
+  top: 5px;
+}
+
+/* Hover effect */
+.navbar-logo a:hover .logo-f {
+  transform: rotate(-20deg);
+}
+
+.navbar-logo a:hover .logo-l {
+  transform: rotate(20deg);
 }
 
 /* Menu Items */
@@ -682,9 +763,8 @@ a {
 
 .navbar-menu li a:hover,
 .navbar-menu li a.active {
-  color: var(--sea-water);
-  font-weight: bold;
-  border-bottom: 2px solid var(--sea-water); /* Optional underline */
+  color: var(--light-yellow);
+  border-bottom: 2px solid var(--light-yellow); /* Optional underline */
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
@@ -700,7 +780,7 @@ a {
   cursor: pointer;
 
   &:hover {
-    color: var(--sea-water);
+    color: var(--light-yellow);
   }
 }
 
@@ -797,11 +877,11 @@ a {
 }
 
 @media only screen and (max-width: 480px) {
-
   .header {
-    height: 50vh;
+    height: 65vh;
+    clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
   }
- 
+
   .header__text-box {
     width: 66vw;
   }
