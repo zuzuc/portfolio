@@ -54,13 +54,13 @@ const Skills = () => {
             // Render all other sections
             return (
               <div key={index} className="skill-section">
-                <h2
+                <h3
                   className={`sub-section-title ${
                     section.type === "Languages" ? "languages" : ""
                   }`}
                 >
                   {section.type}
-                </h2>
+                </h3>
                 <div className="skills-grid">
                   {section.items.map((item, idx) => (
                     <div key={idx} className="skill-item">

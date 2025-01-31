@@ -1,45 +1,15 @@
-/*
-COLORS:
-
-Color Palette: 4280
-#d0c3bd
-#dcdcdd
-#69849b
-#3d6a66
-#1d2424
-
-Color Palette:4275
-#253532
-#517f83
-#9e8d77
-#583d34
-#1f1b17
-
-Color Palette: 4272
-#cd9562
-#cdb5b4
-#007f85
-#002018
-#0f3500
-
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
 
 :root {
   --dark-blue: #1b242f;
-  --white: #faf9f9;
-  --light-grey: #f5f5f5;
-  --light-beige: #fefaf0;
+  --ultra-light-yellow:#fffef8;
+  --light-yellow: #fdf4b4;
   --sea-water: #69849b;
   --light-blue: #bcd2ee;
   --dusty-green: #3d6a66;
   --purple: rgba(147, 111, 213, 0.801);
   --shining-green: rgba(40, 180, 133, 0.801);
-  --yellow: #eead0e;
-  --light-yellow: #f4cc68; 
-  --ultra-light-yellow: #fdf4b4 ;
-  --orange: #f9c584;
+
   --bg-gradient-to-right: linear-gradient(
     to right,
     var(--shining-green),
@@ -47,6 +17,7 @@ Color Palette: 4272
   );
   --highlight: linear-gradient(to top, transparent 5%, #fdf4b4 5%, #fdf4b4 37%, transparent 37%);
 
+  --extra-large-font: 2.5rem;
   --large-font: 2rem;
   --medium-font: 1.5rem;
   --fix-font: 1.2rem;
@@ -70,6 +41,18 @@ Color Palette: 4272
 html {
   /* font-size: 62.5%; */
   scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--extra-large-font);
+}
+
+h2 {
+  font-size: var(--large-font);
+}
+
+h3 {
+  font-size: var(--medium-font);
 }
 
 body {
@@ -139,7 +122,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 4rem;
@@ -162,11 +145,11 @@ body {
   letter-spacing: 3.5rem;
   animation-name: moveInRight;
   animation-duration: 1s;
-  animation-timing-function: 1s ease-out;
+  animation-timing-function: ease-out;
 }
 
 .heading-primary--sub {
-  color: white;
+  color:white;
   display: block;
   font-size: var(--medium-font);
   font-weight: 500;
@@ -223,7 +206,7 @@ body {
   align-items: center;
   height: 3rem;
   width: 3rem;
-  border: 0.5px solid var(--white);
+  border: 0.5px solid white;
   border-radius: 50%;
   margin: 1rem;
   padding: 1rem;
@@ -260,7 +243,6 @@ body {
 .section-title {
   display: flex;
   width: fit-content;
-  font-size: var(--medium-font);
   font-weight: bold;
   color: var(--dark-blue);
   animation-name: moveInLeft;
@@ -379,7 +361,7 @@ body {
 }
 
 .skills-container {
-  background-color: var(--light-beige);
+  background-color: var(--ultra-light-yellow);
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -414,7 +396,6 @@ body {
   width: 100%;
   overflow: clip;
   padding-top: 20px;
-  font-size: 2rem;
   font-weight: 800;
   color: var(--dark-blue);
   margin-bottom: 1rem;
@@ -436,8 +417,9 @@ body {
 .project-title::first-letter {
   font-size: var(--large-font);
   font-weight: 900;
-  color: var(--yellow);
+  color: var(--orange);
   padding-right: 2px;
+  color: var(--purple);
 }
 
 .skills-grid {
@@ -453,7 +435,7 @@ body {
   gap: 8px;
   padding: 10px 22px;
   background: transparent;
-  border: 1px solid var(--yellow);
+  border: 1px solid var(--purple);
   border-radius: 32px;
   transition: transform 0.3s ease;
 }
@@ -500,7 +482,7 @@ a {
 .web-dev-title-container::before {
   content: "";
   position: absolute;
-  background: var(--yellow);
+  background: var(--purple);
   height: 0.1rem;
   width: 100%;
   left: 0;
@@ -529,7 +511,7 @@ a {
   width: 100%;
   min-width: 300px;
   height: 100%;
-  background: var(--light-beige);
+  background: var(--ultra-light-yellow);
   box-shadow: var(--box-shadow), inset 0 4px 0 0 var(--yellow);
   border-radius: 0;
   padding: 2rem;
@@ -574,8 +556,9 @@ a {
 .project-button {
   margin-top: 10px;
   padding: 10px 15px;
-  border: 1px solid #333;
+  border: 1px solid var(--purple);
   background: transparent;
+  color: var(--dark-blue);
   cursor: pointer;
   transition: background 0.3s ease;
 }
