@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Skills from "../pages/Skills";
 import quote from "./../assets/images/quote.svg";
+import profileImg from "./../assets/images/pic.jpg";
 
 function Home() {
   const sectionRef = useRef(null);
@@ -14,7 +15,6 @@ function Home() {
   return (
     <>
       <Header />
-
       {/* Scroll Down Button */}
       <div className="scroll-down-container">
         <button
@@ -27,7 +27,7 @@ function Home() {
       </div>
 
       <div className="home">
-        <div ref={sectionRef}>
+        <div className="quote-picture-container" ref={sectionRef}>
           <div className="quote-container">
             <img className="quote-icon" src={quote} alt="Quote icon" />
             <p className="quote">
@@ -39,16 +39,9 @@ function Home() {
               of coding for transformative change.
             </p>
           </div>
-        </div>
-        <div className="menu-button-container">
-          <ul>
-            {/* <li>
-              <a href="/about">My Journey</a>
-            </li> */}
-            <li>
-              <a href="/portfolio">Portfolio</a>
-            </li>
-          </ul>
+          <div className="profile-pic">
+            <img src={profileImg} alt="Picture of Franziska Luig" />
+          </div>
         </div>
         <Skills />
       </div>
