@@ -19,9 +19,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="navbar-logo">
-        <Link to="/">FL</Link>
+        <Link to="/">
+          <span className="logo-f">F</span>
+          <span className="logo-l">L</span>
+        </Link>
       </div>
 
       {/* Menu Items */}
