@@ -30,18 +30,26 @@ function Home() {
       <div className="home">
         <div className="quote-picture-container" ref={sectionRef}>
           <div className="quote-container">
-            <img className="quote-icon" src={quote} alt="Icon of a quotation mark" />
-            <p className="quote">
-              I am an analytical and creative Web Developer and Project Manager
-              with an interdisciplinary study background. Solving problems and
-              constantly learning gives me great joy, hence I started a
-              professional career as a developer. I support diversity and
-              inclusive approaches in the tech industry and believe in the power
-              of coding for transformative change.
-            </p>
+            <img
+              className="quote-icon"
+              src={quote}
+              alt="Icon of a quotation mark"
+            />
+            <article className="quote">
+              I am an inquisitive and conscientious software developer with a
+              passion for clean, maintainable code. I thrive in collaborative
+              environments where professional exchange, such as pair
+              programming, fosters continuous learning and innovation. <br />
+              <br />
+              With a strong emphasis on both communication and creativity, I
+              enjoy contributing to team success and appreciate an approach that
+              values respect and mutual support. I am committed to focused work
+              time and am always eager to enhance my skills through
+              collaboration and thoughtful problem-solving.
+            </article>
           </div>
           <div className="profile-pic">
-            <img src={profileImg} alt="Profile photo of Franziska Luig" />
+            <img src={profileImg} alt="Franziska Luig" />
           </div>
         </div>
         <Skills />
