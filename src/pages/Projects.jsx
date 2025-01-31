@@ -31,9 +31,9 @@ function Projects() {
               <h2>Portfolio</h2>
             </div>
             <article className="portfolio-intro">
-              A selection of projects I´ve been working on so far, privately or
-              as part of the training to become a "Full Stack Web & App
-              Developer" at WBS Coding School.{" "}
+              A selection of projects I´ve been working on so far, privately,
+              professionally or as part of the training to become a "Full Stack
+              Web & App Developer" at WBS Coding School.{" "}
             </article>
           </div>
 
