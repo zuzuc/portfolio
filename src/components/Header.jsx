@@ -1,5 +1,5 @@
 import React from "react";
-import TypewriterCycle from "./TypewriterCycle";
+import TypeWriterCycle from "./TypeWriterCycle";
 import textData from "./../data/textData";
 import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
 
@@ -32,7 +32,7 @@ function Header() {
             <span className="heading-primary--main2">Luig</span>
           </h1>
           <div className="heading-primary--sub">
-            <TypewriterCycle items={typeWriterItems} />
+            <TypeWriterCycle items={typeWriterItems} />
           </div>
           <div className="icons-container">
             <div className="icon">
