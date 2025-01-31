@@ -338,8 +338,17 @@ body {
 }
 
 .quote {
+  font-size: var(--regular-font);
   text-align: center;
   letter-spacing: 0.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.quote span {
+  line-break: normal;
 }
 
 .profile-pic {
@@ -554,9 +563,27 @@ a {
   z-index: 0; /* Places the line behind the text */
 }
 
-.portfolio-intro {
-  font-weight: 600;
+.web-dev-intro {
+  font-size: var(--regular-font);
+  font-weight: 800;
   letter-spacing: 0.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--ultra-light-yellow);
+}
+
+.headline-container {
+  padding-top: 2rem;
+  line-height: 1.6;
+}
+
+.portfolio-intro {
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-align: justify;
 }
 
 .project-card {
@@ -607,8 +634,8 @@ a {
   color: var(--dark-blue);
   padding: 5px 10px;
   font-size: var(--regular-font);
-  border-radius: 5px;
-  margin-right: 5px;
+  border-radius: 7px;
+  margin-right: 7px;
 }
 
 .project-description {
@@ -616,6 +643,7 @@ a {
   color: var(--dark-blue);
   line-height: 1.6;
   letter-spacing: 0.1rem;
+  text-align: justify;
 }
 
 .project-button {
@@ -930,7 +958,7 @@ a {
   }
 
   .headline-container {
-    padding: 0 1rem;
+    padding: 2 1rem;
   }
 }
 

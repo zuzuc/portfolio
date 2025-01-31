@@ -31,7 +31,10 @@ const skillData = [
       { name: "Docker", icon: "/assets/icons/docker-icon.svg" },
       { name: "Jira", icon: "/assets/icons/jira-icon.svg" },
       { name: "Figma", icon: "/assets/icons/figma-icon.svg" },
-      { name: "Adobe Illustrator", icon: "/assets/icons/adobeillustrator-icon.svg" },
+      {
+        name: "Adobe Illustrator",
+        icon: "/assets/icons/adobeillustrator-icon.svg",
+      },
       { name: "Zapier", icon: "/assets/icons/zapier-icon.svg" },
       { name: "Airtable", icon: "/assets/icons/airtable-icon.svg" },
     ],
@@ -56,7 +59,7 @@ const skillData = [
     items: [
       { name: "Web Development" },
       { name: "Software Development" },
-      { name: "Web Accessibility"},
+      { name: "Web Accessibility" },
       { name: "Intersectional Feminism" },
       { name: "Social & Environmental Justice" },
       { name: "Climate Change & Migration" },
