@@ -228,7 +228,6 @@ body {
   cursor: pointer;
 }
 
-
 /*++++++SCROLL BUTTON++++++++*/
 @keyframes slideDown {
   0% {
@@ -292,16 +291,6 @@ body {
   padding: 1.875rem 0;
 }
 
-.headline-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-  margin-bottom: 3rem;
-}
-
 .section-title {
   display: flex;
   width: fit-content;
@@ -324,69 +313,10 @@ body {
   left: 0;
 }
 
-.profile {
-  padding: 3rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.profile img {
-  border: 0.063rem solid;
-  border-radius: 50%;
-  width: 30%;
-  height: 30%;
-}
-
-/*+++++++++++++++HOME+++++++++++++++++*/
-
+/*+++++++++++++++HOME + SKILLS +++++++++++++++++*/
 .home {
   background-color: white;
   margin-top: 30px;
-}
-
-.menu-button-container {
-  display: flex;
-  justify-content: center;
-  margin: 30px auto;
-  text-align: center;
-}
-
-.menu-button-container ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  gap: 1rem;
-  list-style: none;
-}
-
-.menu-button-container li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  list-style: none;
-  font-size: var(--medium-font);
-  line-height: 1;
-  letter-spacing: 2px;
-  background-color: var(--dark-blue);
-  color: white;
-  border: 1px solid white;
-  border-radius: 4px;
-  padding: 1rem 2rem;
-  transition: all 0.3s ease-out;
-  cursor: pointer;
-
-  &:hover {
-    border: 0.5px solid var(--sea-water);
-    background-color: var(--sea-water);
-    cursor: pointer;
-  }
 }
 
 .quote-container {
@@ -412,15 +342,86 @@ body {
   letter-spacing: 0.2rem;
 }
 
-/*++++++++++SKILLS************/
+.profile-pic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  top: -45px;
+}
 
-.skills-page {
+.profile-pic img {
+  border: 0.063rem;
+  border-radius: 50%;
+  height: 30%;
+  width: 12.5rem;
+}
+
+.skills-page,
+.portfolio-page {
   background-color: white;
   display: flex;
   flex-direction: column;
   width: min(100%, 1040px);
   margin: 0 auto;
   border-radius: 4px;
+}
+
+.menu-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-button-container ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: -6rem;
+  margin-bottom: 0;
+  gap: 1rem;
+  list-style: none;
+  padding: 4rem;
+  border: 1px solid var(--purple);
+}
+
+.menu-button-container li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  list-style: none;
+  font-size: var(--medium-font);
+  line-height: 1;
+  letter-spacing: 2px;
+  background-color: var(--dark-blue);
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  box-shadow: 12px 12px 4px 1px var(--light-yellow);
+
+  &:hover {
+    border: 0.5px solid var(--sea-water);
+    background-color: var(--sea-water);
+    cursor: pointer;
+  }
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem auto;
 }
 
 .skills-container {
@@ -532,7 +533,7 @@ a {
   align-items: center;
   position: relative;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .web-dev-title {
@@ -555,7 +556,7 @@ a {
 
 .portfolio-intro {
   font-weight: 600;
-  padding: 0.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .project-card {
@@ -563,7 +564,6 @@ a {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
   border-radius: 0;
   margin-bottom: 2rem;
   max-width: 900px;
@@ -575,7 +575,7 @@ a {
   min-width: 300px;
   height: 100%;
   background: var(--ultra-light-yellow);
-  box-shadow: var(--box-shadow), inset 0 4px 0 0 var(--yellow);
+  box-shadow: var(--box-shadow), inset 0 4px 0 0 var(--ligth-yellow);
   border-radius: 0;
   padding: 2rem;
   overflow: clip;
@@ -604,19 +604,22 @@ a {
 
 .tag {
   background-color: var(--light-yellow);
-  color: #333;
+  color: var(--dark-blue);
   padding: 5px 10px;
-  font-size: var(--small-font);
+  font-size: var(--regular-font);
   border-radius: 5px;
   margin-right: 5px;
 }
 
 .project-description {
-  color: #333;
+  font-size: var(--regular-font);
+  color: var(--dark-blue);
   line-height: 1.6;
+  letter-spacing: 0.1rem;
 }
 
 .project-button {
+  font-size: var(--regular-font);
   margin-top: 10px;
   padding: 10px 15px;
   border: 1px solid var(--purple);
@@ -669,7 +672,7 @@ a {
 }
 
 .image-drop-shadow:hover {
-  filter: drop-shadow(rgba(211, 164, 24, 0.314) 1rem 1rem 0px);
+  filter: drop-shadow(var(--light-yellow) 1rem 1rem 0px);
 }
 
 .screenshot {
@@ -809,18 +812,22 @@ a {
   .App {
     overflow-x: hidden;
   }
-  .headline-container {
+  .profile-container {
     width: 80vw;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .profile {
-    padding: 0.5rem;
+  .profile-pic {
+    top: -30px;
+    align-content: center;
   }
-  .profile img {
-    width: 70%;
+
+  .menu-button-container ul {
+    margin-top: 1rem;
+    padding: 3rem;
   }
+
   .intro {
     font: var(--regular-font);
   }
@@ -909,12 +916,8 @@ a {
     margin-bottom: 2rem;
   }
 
-  .headline-container {
+  .profile-container {
     width: 70vw;
-  }
-
-  .profile img {
-    width: 50%;
   }
 
   .grids-wrapper {
@@ -925,19 +928,9 @@ a {
     width: 100%; /* Ensures cards take full width in small viewports */
     margin: 0.5rem 0; /* Adds spacing between stacked cards */
   }
-
-  .menu-button-container {
-    margin: 10px auto;
-  }
 }
 
 @media (min-aspect-ratio: 16/9) {
-  .profile {
-    padding: var(--regular-font);
-  }
-  .profile img {
-    width: 12.5rem;
-  }
   .header-primary {
     font-size: 2rem;
   }
