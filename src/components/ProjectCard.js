@@ -1,9 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../App.css";
 import laptopImg from "./../assets/images/laptop.svg";
 
 function ProjectCard({ title, tags, description, image, url }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 }
+    );
+
+    const currentRef = ref.current; // Store ref.current in a variable to avoid stale value
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
   return (
     <div
@@ -36,7 +59,12 @@ function ProjectCard({ title, tags, description, image, url }) {
       </div>
 
       {/* Right Section - Image */}
-      <div className="project-image fly-in-from-right image-drop-shadow">
+      <div
+        ref={ref}
+        className={`project-image fly-in-from-right image-drop-shadow ${
+          isVisible ? "visible" : "hidden"
+        }`}
+      >
         <div className="cover">
           <img className="laptop-frame" src={laptopImg} alt="Laptop frame" />
           <img

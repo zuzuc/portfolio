@@ -188,11 +188,11 @@ body {
 @keyframes fly-in-from-right {
   0% {
     opacity: 0;
-    translate: 100% 0;
+    transform: translateX(100%);
   }
   100% {
     opacity: 1;
-    translate: 0 0;
+    transform: translateX(0);
   }
 }
 
@@ -592,13 +592,13 @@ a {
   align-items: center;
   justify-content: space-between;
   border-radius: 0;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   max-width: 900px;
 }
 
 .project-content {
   flex: 1;
-  width: 100%;
+  width: 60%;
   min-width: 300px;
   height: 100%;
   background: var(--ultra-light-yellow);
@@ -673,34 +673,30 @@ a {
 }
 
 .fly-in-from-right {
-  animation: fly-in-from-right linear both;
-  animation-timeline: view(block);
-  animation-range: cover 0% cover 30%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.cover {
-  object-fit: contain;
-  width: auto;
-  transition: all 0.2s ease-out;
+.fly-in-from-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.cover:hover {
-  transform: translate(-0.5rem, -0.5rem);
-  transition: all 0.2s ease-out;
+.fly-in-from-right.hidden {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.image-drop-shadow:hover {
+  filter: drop-shadow(var(--light-yellow) 1rem 1rem 0px);
+  transition: filter 0.3s ease;
 }
 
 .laptop-frame {
   width: 100%;
   display: block;
   height: auto;
-}
-
-.image-drop-shadow {
-  box-shadow: none;
-}
-
-.image-drop-shadow:hover {
-  filter: drop-shadow(var(--light-yellow) 1rem 1rem 0px);
 }
 
 .screenshot {
@@ -710,6 +706,7 @@ a {
   width: 67%;
   height: 42%;
   border-radius: 2px;
+  transition: transform 0.3s ease;
 }
 
 .visit-website-btn {
