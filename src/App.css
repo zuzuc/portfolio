@@ -207,7 +207,7 @@ body {
   justify-content: center;
 }
 
-.icon {
+.social-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,7 +221,7 @@ body {
   color: white;
 }
 
-.icon:hover {
+.social-icon:hover {
   border: 0.5px solid var(--sea-water);
   background-color: var(--sea-water);
   color: white;
@@ -313,7 +313,7 @@ body {
   left: 0;
 }
 
-/*+++++++++++++++HOME + SKILLS +++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++*/
 .home {
   background-color: white;
   margin-top: 30px;
@@ -341,7 +341,6 @@ body {
   font-size: var(--regular-font);
   text-align: center;
   letter-spacing: 0.2rem;
-  line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
@@ -505,7 +504,7 @@ body {
 .skill-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   padding: 10px 22px;
   background: transparent;
   border: 1px solid var(--purple);
@@ -563,11 +562,11 @@ a {
   z-index: 0; /* Places the line behind the text */
 }
 
-.web-dev-intro {
+.web-dev-intro,
+.portfolio-intro {
   font-size: var(--regular-font);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.2rem;
-  line-height: 1.6;
   text-align: justify;
   max-width: 800px;
   margin: 0 auto;
@@ -575,15 +574,19 @@ a {
   background: var(--ultra-light-yellow);
 }
 
-.headline-container {
-  padding-top: 2rem;
-  line-height: 1.6;
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem auto;
 }
 
-.portfolio-intro {
-  font-weight: 800;
-  letter-spacing: 0.2rem;
-  text-align: justify;
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-card {
@@ -627,6 +630,9 @@ a {
 
 .tags-container {
   margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .tag {
@@ -641,7 +647,6 @@ a {
 .project-description {
   font-size: var(--regular-font);
   color: var(--dark-blue);
-  line-height: 1.6;
   letter-spacing: 0.1rem;
   text-align: justify;
 }
@@ -843,22 +848,8 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-  .profile-pic {
-    top: -30px;
-    align-content: center;
-  }
-
-  .menu-button-container ul {
-    margin-top: 1rem;
-    padding: 3rem;
-  }
-
-  .intro {
-    font: var(--regular-font);
-  }
-  .icon {
-    height: 3.5rem;
-    width: 3.5rem;
+  body {
+    padding: 2rem;
   }
 
   .navbar-menu {
@@ -878,12 +869,46 @@ a {
     display: none;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  .quote-container {
+    padding: 1.5rem;
+  }
+
+  .quote {
+    padding: unset;
+  }
+
+  .profile-pic {
+    top: -20px;
+    align-content: center;
+  }
+
+  .menu-button-container ul {
+    margin-top: 1rem;
+    padding: 3rem;
+  }
+
+  .skills-container {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .skill-section {
+    padding-bottom: 1rem;
+  }
+
+  .skill-item {
+    padding: 6px 15px;
   }
 
   .section-title {
     font-size: var(--medium-font);
+  }
+
+  .web-dev-intro,
+  .portfolio-intro,
+  .project-content {
+    padding: 1.5rem;
+    width: 100%;
   }
 
   .side-by-side-sections {
@@ -903,8 +928,10 @@ a {
   }
 
   .screenshot {
-    left: 18%;
-    width: 64%;
+    top: 30%;
+    left: 20%;
+    width: 60%;
+    height: 40%;
   }
 }
 
@@ -941,10 +968,6 @@ a {
     margin-bottom: 2rem;
   }
 
-  .profile-container {
-    width: 70vw;
-  }
-
   .grids-wrapper {
     grid-template-columns: 1fr; /* Stacks cards vertically */
   }
@@ -952,10 +975,6 @@ a {
   .grid-card {
     width: 100%; /* Ensures cards take full width in small viewports */
     margin: 0.5rem 0; /* Adds spacing between stacked cards */
-  }
-
-  .headline-container {
-    padding: 2 1rem;
   }
 }
 

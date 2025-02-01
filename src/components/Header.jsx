@@ -35,13 +35,13 @@ function Header() {
             <TypeWriterCycle items={typeWriterItems} />
           </div>
           <div className="icons-container">
-            <div className="icon">
+            <div className="social-icon">
               <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
             </div>
-            <div className="icon">
+            <div className="social-icon">
               <FaGithub onClick={handleGit} aria-label="GitHub"/>
             </div>
-            <div className="icon">
+            <div className="social-icon">
               <FaAt onClick={handleMail} aria-label="Email"/>
             </div>
           </div>

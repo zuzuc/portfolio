@@ -17,13 +17,13 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="icons-container">
-        <div className="icon">
+        <div className="social-icon">
           <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
         </div>
-        <div className="icon">
+        <div className="social-icon">
           <FaGithub onClick={handleGit} aria-label="GitHub"/>
         </div>
-        <div className="icon">
+        <div className="social-icon">
           <FaAt onClick={handleMail} aria-label="Email"/>
         </div>
       </div>
