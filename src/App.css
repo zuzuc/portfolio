@@ -27,7 +27,6 @@
   --extra-large-font: 2.5rem;
   --large-font: 2rem;
   --medium-font: 1.5rem;
-  --fix-font: 1.2rem;
   --regular-font: 1rem;
   --small-font: 0.8rem;
 
@@ -962,13 +961,13 @@ a {
   .heading-primary--main1,
   .heading-primary--main2 {
     display: block;
-    font-size: var(--fix-font);
+    font-size: 1rem;
     word-wrap: break-word; /* Ensures words break if necessary */
-    letter-spacing: 1rem;
+    letter-spacing: 0.8rem;
   }
 
   .heading-primary--sub {
-    font-size: var(--fix-font);
+    font-size: 1rem;
   }
 
   .typewriter {
