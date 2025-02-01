@@ -718,7 +718,6 @@ a {
   height: 42%;
   border-radius: 2px;
   transition: transform 0.3s ease;
-  object-fit: contain;
 }
 
 .visit-website-btn {
@@ -935,10 +934,9 @@ a {
   }
 
   .screenshot {
-    top: 30%;
+    top: 27%;
     left: 20%;
     width: 60%;
-    height: 40%;
   }
 }
 
