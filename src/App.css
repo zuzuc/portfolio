@@ -698,6 +698,17 @@ a {
   transition: filter 0.3s ease;
 }
 
+.cover {
+  object-fit: contain;
+  width: auto;
+  transition: all 0.2s ease-out;
+}
+
+.cover:hover {
+  transform: translate(-0.5rem, -0.5rem);
+  transition: all 0.2s ease-out;
+}
+
 .laptop-frame {
   width: 100%;
   display: block;
