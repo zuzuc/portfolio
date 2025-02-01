@@ -915,6 +915,10 @@ a {
     flex-direction: column;
   }
 
+  .projects-container {
+    justify-content: left;
+  }
+  
   .project-card {
     flex-direction: column;
   }
