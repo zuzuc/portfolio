@@ -370,9 +370,11 @@ body {
 
 .skills-page,
 .portfolio-page {
-  background-color: white;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  align-content: center;
+  background-color: white;
   width: min(100%, 1040px);
   margin: 0 auto;
   border-radius: 4px;
@@ -583,12 +585,6 @@ a {
   margin: 3rem auto;
 }
 
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .project-card {
   display: flex;
   width: 100%;
@@ -723,6 +719,7 @@ a {
   height: 42%;
   border-radius: 2px;
   transition: transform 0.3s ease;
+  object-fit: contain;
 }
 
 .visit-website-btn {
@@ -926,10 +923,6 @@ a {
     flex-direction: column;
   }
 
-  .projects-container {
-    justify-content: left;
-  }
-  
   .project-card {
     flex-direction: column;
   }
