@@ -15,8 +15,8 @@ function Projects() {
         <article className="web-dev-intro">
           I am an analytical and creative web developer with an
           interdisciplinary background and over three years of experience in
-          building design systems and pattern libraries using native web
-          technologies. <br />
+          building design systems and pattern libraries. 
+          <br />
           <br />
           Passionate about component-based development, I have gained hands-on
           experience with React and am actively expanding my expertise in web
