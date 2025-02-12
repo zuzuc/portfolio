@@ -3,6 +3,7 @@ import mapstoriesImg from "./../assets/images/mapstories.JPG";
 import pastalavistaImg from "./../assets/images/pastalavista.JPG";
 import animalblogImg from "./../assets/images/animalblog.JPG";
 import zebralogImg from "./../assets/images/zebralog.png";
+import akimiImg from "./../assets/images/akimi.png";
 
 const projectData = [
   {
@@ -10,7 +11,7 @@ const projectData = [
     image: taskmanagerImg,
     alt: "Image of Task Manager App",
     url: "https://taskfocus.netlify.app/",
-    type: "Full-Stack",
+    type: "Frontend",
     techStacks: ["React", "HTML", "CSS", "Local Storage"],
     description:
       "A user-friendly and highly interactive task management application built using React. The app utilizes state management for smooth UI transitions and leverages localStorage to persist tasks across sessions, ensuring a seamless experience. Key features include task creation, categorization, and prioritization, helping users stay organized. Optimized for performance with minimal load times and high responsiveness, this tool is ideal for personal productivity and task tracking.",
@@ -18,12 +19,22 @@ const projectData = [
   {
     title: "Zebralog",
     image: zebralogImg,
-    alt: "Image of Task Manager App",
+    alt: "Image of Zebralog",
     url: "https://zebralog.de/",
     type: "Full-Stack",
     techStacks: ["JavaScript", "SASS", "Drupal", "Twig"],
     description:
       "As a frontend developer at Zebralog, I played a key role in shaping the company’s digital presence and enhancing its participation platform. I contributed to the design and development of the company’s homepage while also working on the evolution of a pattern library that powered a scalable, accessible platform for public sector clients such as 'Stadt Köln', 'Stadt Nürnberg', 'Stadt Konstanz', and 'Stadt Mannheim'. My responsibilities included feature development, technical consulting, code reviews, and ensuring WCAG 2.1-compliant, mobile-first implementations. Leveraging technologies like Drupal (9 & 10), Twig, JavaScript, and SASS, I helped build inclusive and user-friendly digital solutions for civic engagement.",
+  },
+  {
+    title: "Akimi Coaching Website",
+    image: akimiImg,
+    alt: "Image of Akimi Coaching Website",
+    url: "https://akimi.space/",
+    type: "Full-Stack",
+    techStacks: ["TypeScript", "React", "Node.js", "Express", "PostgreSQL"],
+    description:
+      "The Akimi Coaching Website is a comprehensive platform designed to offer coaching services. Built with a TypeScript-based React frontend and a Node.js/Express backend, it provides users with an intuitive interface to explore various coaching programs and packages. The application ensures efficient data management and retrieval through PostgreSQL, enhancing the overall user experience.",
   },
   {
     title: "MapStories",
