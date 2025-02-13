@@ -34,7 +34,7 @@ const projectData = [
     type: "Full-Stack",
     techStacks: ["TypeScript", "React", "Node.js", "Express", "PostgreSQL"],
     description:
-      "The Akimi Coaching Website is a comprehensive platform designed to offer coaching services. Built with a TypeScript-based React frontend and a Node.js/Express backend, it provides users with an intuitive interface to explore various coaching programs and packages. The application ensures efficient data management and retrieval through PostgreSQL, enhancing the overall user experience.",
+      "Akimi Coaching Website is a comprehensive platform designed to offer coaching services. Built collaboratively with another developer for our friend Akimi, the website features a TypeScript-based React frontend and a Node.js/Express backend. It provides users with an intuitive interface to explore various coaching programs and packages. The application ensures efficient data management and retrieval through PostgreSQL, enhancing the overall user experience.",
   },
   {
     title: "MapStories",
