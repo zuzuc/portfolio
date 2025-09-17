@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 function Footer() {
   const handleLinkedIn = () => {
@@ -10,21 +10,14 @@ function Footer() {
     window.open("https://github.com/zuzuc");
   };
 
-  const handleMail = () => {
-    window.open("mailto:franziska.luig@posteo.de");
-  };
-
   return (
     <footer className="footer">
       <div className="icons-container">
         <div className="social-icon">
-          <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
+          <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn" />
         </div>
         <div className="social-icon">
-          <FaGithub onClick={handleGit} aria-label="GitHub"/>
-        </div>
-        <div className="social-icon">
-          <FaAt onClick={handleMail} aria-label="Email"/>
+          <FaGithub onClick={handleGit} aria-label="GitHub" />
         </div>
       </div>
       <div className="copyright">© Franziska Luig 2025</div>

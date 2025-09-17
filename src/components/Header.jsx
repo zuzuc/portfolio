@@ -1,7 +1,7 @@
 import React from "react";
 import TypeWriterCycle from "./TypeWriterCycle";
 import textData from "./../data/textData";
-import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 function Header() {
   const typeWriterItems = [
@@ -19,10 +19,6 @@ function Header() {
     window.open("https://github.com/zuzuc");
   };
 
-  const handleMail = () => {
-    window.open("mailto:franziska.luig@posteo.de");
-  };
-
   return (
     <header>
       <div className="header">
@@ -36,13 +32,10 @@ function Header() {
           </div>
           <div className="icons-container">
             <div className="social-icon">
-              <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
+              <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn" />
             </div>
             <div className="social-icon">
-              <FaGithub onClick={handleGit} aria-label="GitHub"/>
-            </div>
-            <div className="social-icon">
-              <FaAt onClick={handleMail} aria-label="Email"/>
+              <FaGithub onClick={handleGit} aria-label="GitHub" />
             </div>
           </div>
         </div>
