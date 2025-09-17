@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaLinkedinIn, FaGithub, FaAt } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +11,6 @@ const Navbar = () => {
 
   const handleGit = () => {
     window.open("https://github.com/zuzuc");
-  };
-
-  const handleMail = () => {
-    window.open("mailto:franziska.luig@posteo.de");
   };
 
   return (
@@ -38,13 +34,10 @@ const Navbar = () => {
       {/* Button Group */}
       <div className={`navbar-buttons ${isMenuOpen ? "active" : ""}`}>
         <div className="btn">
-          <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn"/>
+          <FaLinkedinIn onClick={handleLinkedIn} aria-label="LinkedIn" />
         </div>
         <div className="btn">
-          <FaGithub onClick={handleGit} aria-label="GitHub"/>
-        </div>
-        <div className="btn">
-          <FaAt onClick={handleMail} aria-label="Email"/>
+          <FaGithub onClick={handleGit} aria-label="GitHub" />
         </div>
       </div>
     </nav>
